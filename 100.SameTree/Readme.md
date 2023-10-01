@@ -1,14 +1,13 @@
-# LeetCode Problem 572: Subtree of Another Tree
+# LeetCode Problem 100: Same Tree
 
 **Difficulty:** Easy
 
-**Link to Problem:** [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+**Link to Problem:** [100. Same Tree](https://leetcode.com/problems/same-tree/)
 
 ---
 
 ## Problem Description
 
-Given the roots of two binary trees `root` and `subRoot`, return `True` if there is a subtree of `root` with the same structure and node values as `subRoot`, and `False` otherwise.
+Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not.
 
-A subtree of a binary tree `tree` is a tree that consists of a node in `tree` and all of this node's descendants. The tree `tree` could also be considered as a subtree of itself.
-
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
