@@ -11,14 +11,14 @@ Certainly! Here is a complete list of all 75 Blind 75 algorithm practice problem
 
 | Problem Name                               | Difficulty | Status                                                       
 | ------------------------------------------ | ---------- | ------------------------------------------------------------ 
-| [Contains Duplicate] (https://leetcode.com/problems/contains-duplicate/)                        | Easy       | 
-| [Valid Anagram] (https://leetcode.com/problems/valid-anagram/)                              | Easy       | 
-| [Two Sum] (https://leetcode.com/problems/two-sum/)                                    | Easy       | 
-| [Group Anagrams] (https://leetcode.com/problems/group-anagrams/)                             | Medium     | 
-| [Top K Frequent Elements] (https://leetcode.com/problems/top-k-frequent-elements/)                    | Medium     | 
-| [Product of Array Except Self] (https://leetcode.com/problems/product-of-array-except-self/)              | Medium     | 
-| [Encode and Decode Strings] (https://leetcode.com/problems/encode-and-decode-strings/)                  | Medium     | 
-| [Longest Consecutive Sequence] (https://leetcode.com/problems/longest-consecutive-sequence/)              | Hard       |
+| [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                        | Easy       | 
+| [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                              | Easy       | 
+| [Two Sum](https://leetcode.com/problems/two-sum/)                                    | Easy       | 
+| [Group Anagrams](https://leetcode.com/problems/group-anagrams/)                             | Medium     | 
+| [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)                    | Medium     | 
+| [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)              | Medium     | 
+| [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)                  | Medium     | 
+| [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)              | Hard       |
 
 ## Section 2
 
