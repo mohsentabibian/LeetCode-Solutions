@@ -12,110 +12,116 @@ This repository contains a curated list of 75 LeetCode problems commonly known a
 
 ## Problem List
 
+# Blind 75 LeetCode Problems
+
+This repository contains a curated list of 75 LeetCode problems commonly known as the "Blind 75." These problems cover a wide range of data structures and algorithms and are frequently asked in technical interviews. Solving these problems can help you build a strong foundation in algorithmic problem-solving.
+
+## Problem List
+
 ### Array
 
-1. [Two Sum](./Array/Two%20Sum)
-2. [Best Time to Buy and Sell Stock](./Array/Best%20Time%20to%20Buy%20and%20Sell%20Stock)
-3. [Contains Duplicate](./Array/Contains%20Duplicate)
-4. [Product of Array Except Self](./Array/Product%20of%20Array%20Except%20Self)
-5. [Maximum Subarray](./Array/Maximum%20Subarray)
-6. [Maximum Product Subarray](./Array/Maximum%20Product%20Subarray)
-7. [Find Minimum in Rotated Sorted Array](./Array/Find%20Minimum%20in%20Rotated%20Sorted%20Array)
-8. [Search in Rotated Sorted Array](./Array/Search%20in%20Rotated%20Sorted%20Array)
-9. [3 Sum](./Array/3%20Sum)
-10. [Container With Most Water](./Array/Container%20With%20Most%20Water)
+1. [Two Sum](https://leetcode.com/problems/two-sum/)
+2. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+3. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+4. [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+5. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+6. [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+7. [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+8. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+9. [3 Sum](https://leetcode.com/problems/3sum/)
+10. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 
 ### Binary
 
-11. [Sum of Two Integers](./Binary/Sum%20of%20Two%20Integers)
-12. [Number of 1 Bits](./Binary/Number%20of%201%20Bits)
-13. [Counting Bits](./Binary/Counting%20Bits)
-14. [Missing Number](./Binary/Missing%20Number)
-15. [Reverse Bits](./Binary/Reverse%20Bits)
+11. [Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
+12. [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
+13. [Counting Bits](https://leetcode.com/problems/counting-bits/)
+14. [Missing Number](https://leetcode.com/problems/missing-number/)
+15. [Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
 ### Dynamic Programming
 
-16. [Climbing Stairs](./Dynamic%20Programming/Climbing%20Stairs)
-17. [Coin Change](./Dynamic%20Programming/Coin%20Change)
-18. [Longest Increasing Subsequence](./Dynamic%20Programming/Longest%20Increasing%20Subsequence)
-19. [Longest Common Subsequence](./Dynamic%20Programming/Longest%20Common%20Subsequence)
-20. [Word Break Problem](./Dynamic%20Programming/Word%20Break%20Problem)
-21. [Combination Sum](./Dynamic%20Programming/Combination%20Sum)
-22. [House Robber](./Dynamic%20Programming/House%20Robber)
-23. [House Robber II](./Dynamic%20Programming/House%20Robber%20II)
-24. [Decode Ways](./Dynamic%20Programming/Decode%20Ways)
-25. [Unique Paths](./Dynamic%20Programming/Unique%20Paths)
-26. [Jump Game](./Dynamic%20Programming/Jump%20Game)
+16. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+17. [Coin Change](https://leetcode.com/problems/coin-change/)
+18. [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+19. [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+20. [Word Break Problem](https://leetcode.com/problems/word-break/)
+21. [Combination Sum](https://leetcode.com/problems/combination-sum/)
+22. [House Robber](https://leetcode.com/problems/house-robber/)
+23. [House Robber II](https://leetcode.com/problems/house-robber-ii/)
+24. [Decode Ways](https://leetcode.com/problems/decode-ways/)
+25. [Unique Paths](https://leetcode.com/problems/unique-paths/)
+26. [Jump Game](https://leetcode.com/problems/jump-game/)
 
 ### Graph
 
-27. [Clone Graph](./Graph/Clone%20Graph)
-28. [Course Schedule](./Graph/Course%20Schedule)
-29. [Pacific Atlantic Water Flow](./Graph/Pacific%20Atlantic%20Water%20Flow)
-30. [Number of Islands](./Graph/Number%20of%20Islands)
-31. [Longest Consecutive Sequence](./Graph/Longest%20Consecutive%20Sequence)
-32. [Alien Dictionary (Leetcode Premium)](./Graph/Alien%20Dictionary)
-33. [Graph Valid Tree (Leetcode Premium)](./Graph/Graph%20Valid%20Tree)
-34. [Number of Connected Components in an Undirected Graph (Leetcode Premium)](./Graph/Number%20of%20Connected%20Components)
+27. [Clone Graph](https://leetcode.com/problems/clone-graph/)
+28. [Course Schedule](https://leetcode.com/problems/course-schedule/)
+29. [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+30. [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+31. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+32. [Alien Dictionary (Leetcode Premium)](https://leetcode.com/problems/alien-dictionary/)
+33. [Graph Valid Tree (Leetcode Premium)](https://leetcode.com/problems/graph-valid-tree/)
+34. [Number of Connected Components in an Undirected Graph (Leetcode Premium)](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
 
 ### Interval
 
-35. [Insert Interval](./Interval/Insert%20Interval)
-36. [Merge Intervals](./Interval/Merge%20Intervals)
-37. [Non-overlapping Intervals](./Interval/Non-overlapping%20Intervals)
-38. [Meeting Rooms (Leetcode Premium)](./Interval/Meeting%20Rooms)
-39. [Meeting Rooms II (Leetcode Premium)](./Interval/Meeting%20Rooms%20II)
+35. [Insert Interval](https://leetcode.com/problems/insert-interval/)
+36. [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+37. [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+38. [Meeting Rooms (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms/)
+39. [Meeting Rooms II (Leetcode Premium)](https://leetcode.com/problems/meeting-rooms-ii/)
 
 ### Linked List
 
-40. [Reverse a Linked List](./Linked%20List/Reverse%20a%20Linked%20List)
-41. [Detect Cycle in a Linked List](./Linked%20List/Detect%20Cycle%20in%20a%20Linked%20List)
-42. [Merge Two Sorted Lists](./Linked%20List/Merge%20Two%20Sorted%20Lists)
-43. [Merge K Sorted Lists](./Linked%20List/Merge%20K%20Sorted%20Lists)
-44. [Remove Nth Node From End Of List](./Linked%20List/Remove%20Nth%20Node%20From%20End%20Of%20List)
-45. [Reorder List](./Linked%20List/Reorder%20List)
+40. [Reverse a Linked List](https://leetcode.com/problems/reverse-linked-list/)
+41. [Detect Cycle in a Linked List](https://leetcode.com/problems/linked-list-cycle/)
+42. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+43. [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+44. [Remove Nth Node From End Of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+45. [Reorder List](https://leetcode.com/problems/reorder-list/)
 
 ### Matrix
 
-46. [Set Matrix Zeroes](./Matrix/Set%20Matrix%20Zeroes)
-47. [Spiral Matrix](./Matrix/Spiral%20Matrix)
-48. [Rotate Image](./Matrix/Rotate%20Image)
-49. [Word Search](./Matrix/Word%20Search)
+46. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+47. [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+48. [Rotate Image](https://leetcode.com/problems/rotate-image/)
+49. [Word Search](https://leetcode.com/problems/word-search/)
 
 ### String
 
-50. [Longest Substring Without Repeating Characters](./String/Longest%20Substring%20Without%20Repeating%20Characters)
-51. [Longest Repeating Character Replacement](./String/Longest%20Repeating%20Character%20Replacement)
-52. [Minimum Window Substring](./String/Minimum%20Window%20Substring)
-53. [Valid Anagram](./String/Valid%20Anagram)
-54. [Group Anagrams](./String/Group%20Anagrams)
-55. [Valid Parentheses](./String/Valid%20Parentheses)
-56. [Valid Palindrome](./String/Valid%20Palindrome)
-57. [Longest Palindromic Substring](./String/Longest%20Palindromic%20Substring)
-58. [Palindromic Substrings](./String/Palindromic%20Substrings)
-59. [Encode and Decode Strings (Leetcode Premium)](./String/Encode%20and%20Decode%20Strings)
+50. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+51. [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+52. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+53. [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+54. [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+55. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+56. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+57. [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+58. [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
+59. [Encode and Decode Strings (Leetcode Premium)](https://leetcode.com/problems/encode-and-decode-strings/)
 
 ### Tree
 
-60. [Maximum Depth of Binary Tree](./Tree/Maximum%20Depth%20of%20Binary%20Tree)
-61. [Same Tree](./Tree/Same%20Tree)
-62. [Invert/Flip Binary Tree](./Tree/Invert%20Flip%20Binary%20Tree)
-63. [Binary Tree Maximum Path Sum](./Tree/Binary%20Tree%20Maximum%20Path%20Sum)
-64. [Binary Tree Level Order Traversal](./Tree/Binary%20Tree%20Level%20Order%20Traversal)
-65. [Serialize and Deserialize Binary Tree](./Tree/Serialize%20and%20Deserialize%20Binary%20Tree)
-66. [Subtree of Another Tree](./Tree/Subtree%20of%20Another%20Tree)
-67. [Construct Binary Tree from Preorder and Inorder Traversal](./Tree/Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal)
-68. [Validate Binary Search Tree](./Tree/Validate%20Binary%20Search%20Tree)
-69. [Kth Smallest Element in a BST](./Tree/Kth%20Smallest%20Element%20in%20a%20BST)
-70. [Lowest Common Ancestor of BST](./Tree/Lowest%20Common%20Ancestor%20of%20BST)
-71. [Implement Trie (Prefix Tree)](./Tree/Implement%20Trie)
-72. [Add and Search Word](./Tree/Add%20and%20Search%20Word)
-73. [Word Search II](./Tree/Word%20Search%20II)
+60. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+61. [Same Tree](https://leetcode.com/problems/same-tree/)
+62. [Invert/Flip Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+63. [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+64. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+65. [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+66. [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+67. [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+68. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+69. [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+70. [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+71. [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+72. [Add and Search Word](https://leetcode.com/problems/add-and-search-word-data-structure-design/)
+73. [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
 ### Heap
 
-74. [Merge K Sorted Lists](./Heap/Merge%20K%20Sorted%20Lists)
-75. [Top K Frequent Elements](./Heap/Top%20K%20Frequent%20Elements)
+74. [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+75. [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 
 
 ## How to Use
