@@ -17,7 +17,7 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [659. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)          | Medium     |
 | [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)    | Hard       |
 
-### Array & Hashing
+### Two Pointers
 
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
@@ -25,7 +25,7 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [15. 3Sum](https://leetcode.com/problems/3sum/)                                                       | Medium     |
 | [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)           | Medium     |
 
-### Array & Hashing
+### Sliding Window
 
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
@@ -34,14 +34,23 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium |
 | [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)             | Hard       |
 
+### Stack
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)                            | Easy       |
 
+### Binary search
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [153. Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium |
 | [33. Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)   | Medium     |
 
+### Linked List
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                       | Easy       |
 | [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)                   | Easy       |
 | [143. Reorder List](https://leetcode.com/problems/reorder-list/)                                     | Medium     |
@@ -49,7 +58,10 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)                           | Medium     |
 | [23. Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)                       | Hard       |
 
+### Trees
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)                          | Easy       |
 | [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)     | Easy       |
 | [100. Same Tree](https://leetcode.com/problems/same-tree/)                                           | Easy       |
@@ -62,19 +74,31 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)     | Hard       |
 | [297. Serialize And Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard |
 
+### Tries
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [208. Implement Trie Prefix Tree](https://leetcode.com/problems/implement-trie-prefix-tree/)         | Medium     |
 | [211. Design Add And Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | Medium |
 | [212. Word Search II](https://leetcode.com/problems/word-search-ii/)                                 | Hard       |
 
+### Heap / Priority Queue
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [295. Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)     | Hard       |
 
+### Backtracking
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [39. Combination Sum](https://leetcode.com/problems/combination-sum/)                                 | Medium     |
 | [79. Word Search](https://leetcode.com/problems/word-search/)                                         | Medium     |
 
+### Graphs
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)                           | Medium     |
 | [133. Clone Graph](https://leetcode.com/problems/clone-graph/)                                       | Medium     |
 | [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)       | Medium     |
@@ -82,10 +106,16 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [323. Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium |
 | [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)                               | Medium     |
 
+### Advanced Graphs
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)                               | Hard       |
 
+### 1-D Dynamic Programming
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)                                   | Easy       |
 | [198. House Robber](https://leetcode.com/problems/house-robber/)                                       | Easy       |
 | [213. House Robber II](https://leetcode.com/problems/house-robber-ii/)                                 | Medium     |
@@ -97,27 +127,42 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 | [139. Word Break](https://leetcode.com/problems/word-break/)                                           | Medium     |
 | [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium     |
 
+### 2-D Dynamic Programming
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [62. Unique Paths](https://leetcode.com/problems/unique-paths/)                                         | Medium     |
 | [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)       | Medium     |
 
+### Greedy
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                   | Easy       |
 | [55. Jump Game](https://leetcode.com/problems/jump-game/)                                                 | Medium     |
 
+### Intervals
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [57. Insert Interval](https://leetcode.com/problems/insert-interval/)                                     | Hard       |
 | [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)                                   | Medium     |
 | [435. Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)             | Medium     |
 | [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)                                       | Easy       |
 | [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                                 | Medium     |
 
+### Math & Geometry
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [48. Rotate Image](https://leetcode.com/problems/rotate-image/)                                           | Medium     |
 | [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)                                         | Medium     |
 | [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)                               | Medium     |
 
+### Bit Manupulation
 
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
 | [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)                                   | Easy       |
 | [338. Counting Bits](https://leetcode.com/problems/counting-bits/)                                         | Medium     |
 | [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)                                           | Easy       |
