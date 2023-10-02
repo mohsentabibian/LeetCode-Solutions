@@ -4,20 +4,6 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 
 ## Problem List
 
-Below is the list of the 75 LeetCode problems included in this collection. Each problem is linked to its LeetCode page, and solutions can be found in the respective directories.
-
-# Blind 75 LeetCode Problems
-
-This repository contains a curated list of 75 LeetCode problems commonly known as the "Blind 75." These problems cover a wide range of data structures and algorithms and are frequently asked in technical interviews. Solving these problems can help you build a strong foundation in algorithmic problem-solving.
-
-## Problem List
-
-# Blind 75 LeetCode Problems
-
-This repository contains a curated list of 75 LeetCode problems commonly known as the "Blind 75." These problems cover a wide range of data structures and algorithms and are frequently asked in technical interviews. Solving these problems can help you build a strong foundation in algorithmic problem-solving.
-
-## Problem List
-
 ### Array
 
 1. [Two Sum](https://leetcode.com/problems/two-sum/)
