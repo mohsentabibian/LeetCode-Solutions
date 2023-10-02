@@ -6,11 +6,10 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 
 Certainly! Here is a complete list of all 75 Blind 75 algorithm practice problems with their respective web addresses, organized by sections:
 
-```markdown
 ## Array & Hashing
 
-| Problem Name                               | Difficulty | Status                                                       
-| ------------------------------------------ | ---------- | ------------------------------------------------------------ 
+| Problem Name                               | Difficulty |
+| ------------------------------------------ | ---------- | 
 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                        | Easy       | 
 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                              | Easy       | 
 | [Two Sum](https://leetcode.com/problems/two-sum/)                                    | Easy       | 
@@ -140,7 +139,6 @@ https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Code](h
 | Reverse Bits                               | Easy       | [Link](https://leetcode.com/problems/reverse-bits/)          | [Code](https://github.com/user/reverse-bits) |
 | Missing Number                             | Easy       | [Link](https://leetcode.com/problems/missing-number/)        | [Code](https://github.com/user/missing-number) |
 | Sum of Two Integers                        | Medium     | [Link](https://leetcode.com/problems/sum-of-two-integers/)   | [Code](https://github.com/user/sum-of-two-integers) |
-```
 
 You can continue this pattern for all 75 problems, filling in the appropriate web addresses and sections as needed.
 
