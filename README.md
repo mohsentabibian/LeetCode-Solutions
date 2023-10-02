@@ -137,7 +137,6 @@ If you have a better solution or want to add more problems to the collection, fe
 ## Resources
 
 - [LeetCode](https://leetcode.com/): The official LeetCode website.
-- [Blind 75 LeetCode Playlist on YouTube](https://www.youtube.com/playlist?list=PLDdcY4olLQk0bvojIzmfO2bPdEtgJw-NI): Video explanations of these problems by various educators.
 - [LeetCode Discuss](https://leetcode.com/discuss/): LeetCode's discussion forum for each problem. You can find helpful hints and discussions here.
 
 ## Disclaimer
