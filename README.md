@@ -4,143 +4,126 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 
 ## Problem List
 
-Certainly! Here is a complete list of all 75 Blind 75 algorithm practice problems with their respective web addresses, organized by sections:
+### Array & Hashing
 
-## Array & Hashing
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
+| [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                        | Easy       |
+| [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                  | Easy       |
+| [1. Two Sum](https://leetcode.com/problems/two-sum/)                                              | Easy       |
+| [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                | Medium     |
+| [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)              | Medium     |
+| [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)    | Medium     |
+| [659. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)          | Medium     |
+| [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)    | Hard       |
 
-| Problem Name                               | Difficulty |
-| ------------------------------------------ | ---------- | 
-| [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                        | Easy       | 
-| [Valid Anagram](https://leetcode.com/problems/valid-anagram/)                              | Easy       | 
-| [Two Sum](https://leetcode.com/problems/two-sum/)                                    | Easy       | 
-| [Group Anagrams](https://leetcode.com/problems/group-anagrams/)                             | Medium     | 
-| [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)                    | Medium     | 
-| [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)              | Medium     | 
-| [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)                  | Medium     | 
-| [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)              | Hard       |
+### Array & Hashing
 
-## Section 2
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
+| [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)                            | Easy       |
+| [15. 3Sum](https://leetcode.com/problems/3sum/)                                                       | Medium     |
+| [11. Container With Most Water](https://leetcode.com/problems/container-with-most-water/)           | Medium     |
 
-| Problem Name                               | Difficulty | Status                                                       | Code                                             |
-| ------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------ |
-| Valid Palindrome                           | Easy       | [Link](https://leetcode.com/problems/valid-palindrome/)       | [Code](https://github.com/user/valid-palindrome) |
-| 3Sum                                       | Medium     | [Link](https://leetcode.com/problems/3sum/)                   | [Code](https://github.com/user/3sum) |
-| Container With Most Water                  | Medium     | [Link](https://leetcode.com/problems/container-with-most-water/) | [Code](https://github.com/user/container-water) |
+### Array & Hashing
 
-## Section 3
+| Problem Name                                    | Difficulty |
+| ----------------------------------------------- | ---------- |
+| [121. Best Time to Buy And Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy       |
+| [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium |
+| [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | Medium |
+| [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)             | Hard       |
 
-| Best Time to Buy And Sell Stock            | Easy       | [Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | [Code](https://github.com/user/buy-sell-stock) |
-| Longest Substring Without Repeating Characters | Medium | [Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | [Code](https://github.com/user/substring-no-repeat) |
-| Longest Repeating Character Replacement    | Medium     | [Link](https://leetcode.com/problems/longest-repeating-character-replacement/) | [Code](https://github.com/user/longest-repeating) |
-| Minimum Window Substring                   | Hard       | [Link](https://leetcode.com/problems/minimum-window-substring/) | [Code](https://github.com/user/minimum-window) |
 
-## Section 4
+| [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)                            | Easy       |
 
-| Valid Parentheses                          | Easy       | [Link](https://leetcode.com/problems/valid-parentheses/)     | [Code](https://github.com/user/valid-parentheses) |
-| Find Minimum In Rotated Sorted Array       | Medium     | [Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | [Code](https://github.com/user/find-min-rotated-array) |
-| Search In Rotated Sorted Array             | Medium     | [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/) | [Code](https://github.com/user/search-rotated-array) |
 
-## Section 5
+| [153. Find Minimum In Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/) | Medium |
+| [33. Search In Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)   | Medium     |
 
-| Reverse Linked List                        | Easy       | [Link](https://leetcode.com/problems/reverse-linked-list/)   | [Code](https://github.com/user/reverse-linked-list) |
-| Merge Two Sorted Lists                    | Easy       | [Link](https://leetcode.com/problems/merge-two-sorted-lists/) | [Code](https://github.com/user/merge-sorted-lists) |
-| Reorder List                              | Medium     | [Link](https://leetcode.com/problems/reorder-list/)         | [Code](https://github.com/user/reorder-list) |
-| Remove Nth Node From End of List          | Medium     | [Link](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Code](https://github.com/user/remove-nth-node) |
-| Linked List Cycle                         | Medium     | [Link](https://leetcode.com/problems/linked-list-cycle/)     | [Code](https://github.com/user/linked-list-cycle) |
-| Merge K Sorted Lists                      | Hard       | [Link](https://leetcode.com/problems/merge-k-sorted-lists/)   | [Code](https://github.com/user/merge-k-sorted-lists) |
 
-## Section 6
+| [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)                       | Easy       |
+| [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)                   | Easy       |
+| [143. Reorder List](https://leetcode.com/problems/reorder-list/)                                     | Medium     |
+| [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | Medium |
+| [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)                           | Medium     |
+| [23. Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)                       | Hard       |
 
-| Invert Binary Tree                        | Easy       | [Link](https://leetcode.com/problems/invert-binary-tree/)     | [Code](https://github.com/user/invert-binary-tree) |
-| Maximum Depth of Binary Tree              | Easy       | [Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/) | [Code](https://github.com/user/maximum-depth-binary-tree) |
-| Same Tree                                 | Easy       | [Link](https://leetcode.com/problems/same-tree/)             | [Code](https://github.com/user/same-tree) |
-| Subtree of Another Tree                   | Easy       | [Link](https://leetcode.com/problems/subtree-of-another-tree/) | [Code](https://github.com/user/subtree-another-tree) |
-| Lowest Common Ancestor of a Binary Search Tree | Easy  | [Link](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | [Code](https://github.com/user/lca-binary-search-tree) |
-| Binary Tree Level Order Traversal         | Medium     | [Link](https://leetcode.com/problems/binary-tree-level-order-traversal/) | [Code](https://github.com/user/binary-tree-level-order) |
-| Validate Binary Search Tree               | Medium     | [Link](https://leetcode.com/problems/validate-binary-search-tree/) | [Code](https://github.com/user/validate-binary-search-tree) |
-| Kth Smallest Element In a BST             | Medium     | [Link](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | [Code](https://github.com/user/kth-smallest-bst) |
-| Construct Binary Tree From Preorder And Inorder Traversal | Medium | [Link](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | [Code](https://github.com/user/construct-binary-tree) |
-| Binary Tree Maximum Path Sum              | Hard       | [Link](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | [Code](https://github.com/user/binary-tree-max-path) |
-| Serialize And Deserialize Binary Tree     | Hard       | [Link](
 
-https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | [Code](https://github.com/user/serialize-deserialize-bst) |
+| [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)                          | Easy       |
+| [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)     | Easy       |
+| [100. Same Tree](https://leetcode.com/problems/same-tree/)                                           | Easy       |
+| [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)               | Easy       |
+| [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | Easy |
+| [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium |
+| [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)       | Medium     |
+| [230. Kth Smallest Element In a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)   | Medium     |
+| [105. Construct Binary Tree From Preorder And Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) | Medium |
+| [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)     | Hard       |
+| [297. Serialize And Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Hard |
 
-## Section 7
 
-| Implement Trie Prefix Tree                | Medium     | [Link](https://leetcode.com/problems/implement-trie-prefix-tree/) | [Code](https://github.com/user/implement-trie) |
-| Design Add And Search Words Data Structure | Medium     | [Link](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | [Code](https://github.com/user/design-trie) |
-| Word Search II                            | Hard       | [Link](https://leetcode.com/problems/word-search-ii/)        | [Code](https://github.com/user/word-search-ii) |
+| [208. Implement Trie Prefix Tree](https://leetcode.com/problems/implement-trie-prefix-tree/)         | Medium     |
+| [211. Design Add And Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/) | Medium |
+| [212. Word Search II](https://leetcode.com/problems/word-search-ii/)                                 | Hard       |
 
-## Section 8
 
-| Find Median From Data Stream               | Hard       | [Link](https://leetcode.com/problems/find-median-from-data-stream/) | [Code](https://github.com/user/find-median-data-stream) |
+| [295. Find Median From Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)     | Hard       |
 
-## Section 9
 
-| Combination Sum                            | Medium     | [Link](https://leetcode.com/problems/combination-sum/)       | [Code](https://github.com/user/combination-sum) |
-| Word Search                               | Medium     | [Link](https://leetcode.com/problems/word-search/)          | [Code](https://github.com/user/word-search) |
+| [39. Combination Sum](https://leetcode.com/problems/combination-sum/)                                 | Medium     |
+| [79. Word Search](https://leetcode.com/problems/word-search/)                                         | Medium     |
 
-## Section 10
 
-| Number of Islands                         | Medium     | [Link](https://leetcode.com/problems/number-of-islands/)     | [Code](https://github.com/user/number-of-islands) |
-| Clone Graph                               | Medium     | [Link](https://leetcode.com/problems/clone-graph/)           | [Code](https://github.com/user/clone-graph) |
-| Pacific Atlantic Water Flow               | Medium     | [Link](https://leetcode.com/problems/pacific-atlantic-water-flow/) | [Code](https://github.com/user/pacific-atlantic-water) |
-| Course Schedule                           | Medium     | [Link](https://leetcode.com/problems/course-schedule/)       | [Code](https://github.com/user/course-schedule) |
-| Number of Connected Components In An Undirected Graph | Medium | [Link](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | [Code](https://github.com/user/connected-components) |
-| Graph Valid Tree                          | Medium     | [Link](https://leetcode.com/problems/graph-valid-tree/)      | [Code](https://github.com/user/graph-valid-tree) |
+| [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)                           | Medium     |
+| [133. Clone Graph](https://leetcode.com/problems/clone-graph/)                                       | Medium     |
+| [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)       | Medium     |
+| [207. Course Schedule](https://leetcode.com/problems/course-schedule/)                                 | Medium     |
+| [323. Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) | Medium |
+| [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)                               | Medium     |
 
-## Section 11
 
-| Alien Dictionary                           | Hard       | [Link](https://leetcode.com/problems/alien-dictionary/)      | [Code](https://github.com/user/alien-dictionary) |
+| [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)                               | Hard       |
 
-## Section 12
 
-| Climbing Stairs                            | Easy       | [Link](https://leetcode.com/problems/climbing-stairs/)       | [Code](https://github.com/user/climbing-stairs) |
-| House Robber                               | Easy       | [Link](https://leetcode.com/problems/house-robber/)          | [Code](https://github.com/user/house-robber) |
-| House Robber II                            | Medium     | [Link](https://leetcode.com/problems/house-robber-ii/)       | [Code](https://github.com/user/house-robber-ii) |
-| Longest Palindromic Substring               | Medium     | [Link](https://leetcode.com/problems/longest-palindromic-substring/) | [Code](https://github.com/user/longest-palindromic) |
-| Palindromic Substrings                      | Medium     | [Link](https://leetcode.com/problems/palindromic-substrings/) | [Code](https://github.com/user/palindromic-substrings) |
-| Decode Ways                                | Medium     | [Link](https://leetcode.com/problems/decode-ways/)           | [Code](https://github.com/user/decode-ways) |
-| Coin Change                                | Medium     | [Link](https://leetcode.com/problems/coin-change/)           | [Code](https://github.com/user/coin-change) |
-| Maximum Product Subarray                   | Medium     | [Link](https://leetcode.com/problems/maximum-product-subarray/) | [Code](https://github.com/user/maximum-product-subarray) |
-| Word Break                                 | Medium     | [Link](https://leetcode.com/problems/word-break/)            | [Code](https://github.com/user/word-break) |
-| Longest Increasing Subsequence              | Medium     | [Link](https://leetcode.com/problems/longest-increasing-subsequence/) | [Code](https://github.com/user/longest-increasing-subseq) |
+| [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)                                   | Easy       |
+| [198. House Robber](https://leetcode.com/problems/house-robber/)                                       | Easy       |
+| [213. House Robber II](https://leetcode.com/problems/house-robber-ii/)                                 | Medium     |
+| [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)       | Medium     |
+| [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)                   | Medium     |
+| [91. Decode Ways](https://leetcode.com/problems/decode-ways/)                                         | Medium     |
+| [322. Coin Change](https://leetcode.com/problems/coin-change/)                                         | Medium     |
+| [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)             | Medium     |
+| [139. Word Break](https://leetcode.com/problems/word-break/)                                           | Medium     |
+| [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) | Medium     |
 
-## Section 13
 
-| Unique Paths                               | Medium     | [Link](https://leetcode.com/problems/unique-paths/)          | [Code](https://github.com/user/unique-paths) |
-| Longest Common Subsequence                 | Medium     | [Link](https://leetcode.com/problems/longest-common-subsequence/) | [Code](https://github.com/user/longest-common-subseq) |
+| [62. Unique Paths](https://leetcode.com/problems/unique-paths/)                                         | Medium     |
+| [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)       | Medium     |
 
-## Section 14
 
-| Maximum Subarray                           | Easy       | [Link](https://leetcode.com/problems/maximum-subarray/)      | [Code](https://github.com/user/maximum-subarray) |
-| Jump Game                                  | Medium     | [Link](https://leetcode.com/problems/jump-game/)             | [Code](https://github.com/user/jump-game) |
+| [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                                   | Easy       |
+| [55. Jump Game](https://leetcode.com/problems/jump-game/)                                                 | Medium     |
 
-## Section 15
 
-| Insert Interval                            | Hard       | [Link](https://leetcode.com/problems/insert-interval/)       | [Code](https://github.com/user/insert-interval) |
-| Merge Intervals                            | Medium     | [Link](https://leetcode.com/problems/merge-intervals/)       | [Code](https://github.com/user/merge-intervals) |
-| Non Overlapping Intervals                  | Medium     | [Link](https://leetcode.com/problems/non-overlapping-intervals/) | [Code](https://github.com/user/non-overlapping-intervals) |
-| Meeting Rooms                             | Easy       | [Link](https://leetcode.com/problems/meeting-rooms/)         | [Code](https://github.com/user/meeting-rooms) |
-| Meeting Rooms II                          | Medium     | [Link](https://leetcode.com/problems/meeting-rooms-ii/)      | [Code](https://github.com/user/meeting-rooms-ii) |
+| [57. Insert Interval](https://leetcode.com/problems/insert-interval/)                                     | Hard       |
+| [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)                                   | Medium     |
+| [435. Non Overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)             | Medium     |
+| [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)                                       | Easy       |
+| [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                                 | Medium     |
 
-## Section 16
 
-| Rotate Image                               | Medium     | [Link](https://leetcode.com/problems/rotate-image/)          | [Code](https://github.com/user/rotate-image) |
-| Spiral Matrix                              | Medium     | [Link](https://leetcode.com/problems/spiral-matrix/)         | [Code](https://github.com/user/spiral-matrix) |
-| Set Matrix Zeroes                          | Medium     | [Link](https://leetcode.com/problems/set-matrix-zeroes/)     | [Code](https://github.com/user/set-matrix-zeroes) |
+| [48. Rotate Image](https://leetcode.com/problems/rotate-image/)                                           | Medium     |
+| [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)                                         | Medium     |
+| [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)                               | Medium     |
 
-## Section 17
 
-| Number of 1 Bits                           | Easy       | [Link](https://leetcode.com/problems/number-of-1-bits/)      | [Code](https://github.com/user/number-of-1-bits) |
-| Counting Bits                              | Medium     | [Link](https://leetcode.com/problems/counting
+| [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)                                   | Easy       |
+| [338. Counting Bits](https://leetcode.com/problems/counting-bits/)                                         | Medium     |
+| [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)                                           | Easy       |
+| [268. Missing Number](https://leetcode.com/problems/missing-number/)                                       | Easy       |
+| [371. Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)                             | Medium     |
 
--bits/)         | [Code](https://github.com/user/counting-bits) |
-| Reverse Bits                               | Easy       | [Link](https://leetcode.com/problems/reverse-bits/)          | [Code](https://github.com/user/reverse-bits) |
-| Missing Number                             | Easy       | [Link](https://leetcode.com/problems/missing-number/)        | [Code](https://github.com/user/missing-number) |
-| Sum of Two Integers                        | Medium     | [Link](https://leetcode.com/problems/sum-of-two-integers/)   | [Code](https://github.com/user/sum-of-two-integers) |
-
-You can continue this pattern for all 75 problems, filling in the appropriate web addresses and sections as needed.
 
 ## How to Use
 
