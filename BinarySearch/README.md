@@ -45,6 +45,3 @@ If you have a better solution or want to add more problems to the collection, fe
 This repository is meant for educational purposes and to help individuals prepare for technical interviews. Please respect LeetCode's terms of use and guidelines when using this repository.
 
 Happy coding!
-```
-
-Please replace `"yourusername"` in the repository URL with your actual GitHub username when you use it. You can also add more problems to the list and customize the README to suit your needs.
