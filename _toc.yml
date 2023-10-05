@@ -1,1 +1,17 @@
+- section: Introduction
+  chapters:
+    - file: introduction/introduction.ipynb
+      title: Introduction
+- section: Chapter 1: Arrays and Hashing
+  chapters:
+    - file: ArrayHashing/1. Two Sum.ipynb
+      title: Lesson 1: Same Tree
+    - file: ArrayHashing/128. Longest Consecutive Sequence.ipynb
+      title: Lesson 2: Longest Consecutive Sequence
+- section: Chapter 2: Two Pointers
+  chapters:
+    - file: Two Pointers/11. Container With Most Water.ipynb
+      title: Lesson 1: Container With Most Water
+    - file: Two Pointers/125. Valid Palindrome.ipynb
+      title: Lesson 2: Valid Palindrome
 
