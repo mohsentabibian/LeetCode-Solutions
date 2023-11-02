@@ -2,8 +2,8 @@
 
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
-| [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                        | Easy       |
-| [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)                                  | Easy       |
+| [217. Contains Duplicate](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/1.%20Two%20Sum.ipynb)                        | Easy       |
+| [242. Valid Anagram](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/128.%20Longest%20Consecutive%20Sequence.ipynb)                                  | Easy       |
 | [1. Two Sum](https://leetcode.com/problems/two-sum/)                                              | Easy       |
 | [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                | Medium     |
 | [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)              | Medium     |
