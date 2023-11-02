@@ -2,9 +2,8 @@
 
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
-| [39. Combination Sum](https://leetcode.com/problems/combination-sum/)                                 | Medium     |
-| [79. Word Search](https://leetcode.com/problems/word-search/)                                         | Medium     |
-
+| [39. Combination Sum](https://leetcode.com/problems/combination-sum/)        | Medium     |
+| [79. Word Search](https://leetcode.com/problems/word-search/)                | Medium     |
 
 ## Contribute
 
