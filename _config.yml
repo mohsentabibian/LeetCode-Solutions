@@ -1,0 +1,23 @@
+# Jupyter Book configuration
+
+# Project information
+title: Solution to Blind 75 LeetCode Problems
+author: Mohsen Tabibian, Saeed Samadidana
+description: Explore 75 essential problems frequently asked in tech interviews. Each solution includes detailed explanations and time/space complexity analysis. Boost your coding skills and interview preparedness!
+repository: https://github.com/mohsentabibian/LeetCode-Solutions
+
+# Execute notebooks when building (set to false if you don't want to run the code)
+execute:
+  execute_notebooks: auto
+
+# HTML settings
+html:
+  theme: jupyter
+  logo: ![Blind 75 LeetCode](https://img.shields.io/badge/Blind_75_LeetCode-Solutions-blue?labelColor=red)
+  toc:
+    display: true
+
+# Build settings
+repository_url: https://github.com/mohsentabibian/LeetCode-Solutions  # URL to the GitHub repository
+
+# Additional configuration options can be added based on your project's needs.
