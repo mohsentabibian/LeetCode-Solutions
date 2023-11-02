@@ -1,5 +1,5 @@
 # Array & Hashing Solutions - Blind 75 LeetCode Problems
-![Array & Hashing Problems](https://img.shields.io/badge/Array_&_Hashing_Problems-blue)![Blind 75 LeetCode](https://img.shields.io/badge/Blind_75_LeetCode-Solutions-blue?labelColor=red)
+![Array & Hashing Solutions](https://img.shields.io/badge/Array_&_Hashing_Solutions-blue)![Blind 75 LeetCode](https://img.shields.io/badge/Blind_75_LeetCode-Problems-blue?labelColor=red)
 
 This repository contains my solutions to Array & Hashing Problems from Blind 75 LeetCode problems. I've organized the solutions by categories for easier navigation and reference. Each problem solution is presented in Jupyter Notebook format (`.ipynb`).
 
