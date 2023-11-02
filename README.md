@@ -1,5 +1,7 @@
 # Blind 75 LeetCode Problems
 
+![Blind 75 LeetCode](https://img.shields.io/badge/Blind_75_LeetCode-Solutions-blue?labelColor=red)
+
 This repository contains a curated list of 75 LeetCode problems that are commonly known as the "Blind 75." These problems cover a wide range of data structures and algorithms and are frequently asked in technical interviews. Solving these problems can help you build a strong foundation in algorithmic problem-solving.
 
 ## Problem List
