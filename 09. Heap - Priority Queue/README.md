@@ -1,6 +1,6 @@
 # Heap / Priority Queue Problems - Blind 75 LeetCode 
 
- Problem Name                                    | Difficulty |
+| Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
 | [703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)     | Easy       |
 | [1046. Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)     | Easy       |
