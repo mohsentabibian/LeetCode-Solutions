@@ -3,7 +3,7 @@
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
 | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)                                   | Easy       |
-| [198. House Robber](https://leetcode.com/problems/house-robber/)                                       | Easy       |
+| [198. House Robber](https://leetcode.com/problems/house-robber/)                                       | Medium     |
 | [213. House Robber II](https://leetcode.com/problems/house-robber-ii/)                                 | Medium     |
 | [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)       | Medium     |
 | [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)                   | Medium     |
