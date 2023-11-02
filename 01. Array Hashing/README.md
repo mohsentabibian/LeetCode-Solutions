@@ -1,4 +1,5 @@
 # Array & Hashing Problems - Blind 75 LeetCode 
+![LeetCode](https://img.shields.io/badge/LeetCode-Solutions-blue)
 
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
