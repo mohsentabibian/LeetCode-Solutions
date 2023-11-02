@@ -1,6 +1,6 @@
 # LeetCode-Solutions
 
-![LeetCode](https://img.shields.io/badge/LeetCode-Solutions-blue)
+![LeetCode](https://img.shields.io/badge/75 Blind LeetCode-Solutions-blue)
 
 This repository contains my solutions to LeetCode problems. I've organized the solutions by categories for easier navigation and reference. Each problem solution is presented in Jupyter Notebook format (`.ipynb`).
 
