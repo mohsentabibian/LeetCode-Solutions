@@ -1,4 +1,4 @@
-# Blind 75 LeetCode Problems
+# Blind 75 LeetCode Solutions
 
 ![Blind 75 LeetCode](https://img.shields.io/badge/Blind_75_LeetCode-Solutions-blue?labelColor=red)
 
@@ -7,7 +7,7 @@ This repository contains a curated list of 75 LeetCode problems that are commonl
 ## Problem List
 
 ### Array & Hashing
-
+![Array & Hashing](https://img.shields.io/badge/Array_&_Hashing-Solutions-blue?labelColor=red)
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
 | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                        | Easy       |
