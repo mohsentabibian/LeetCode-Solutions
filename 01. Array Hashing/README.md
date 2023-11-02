@@ -2,14 +2,14 @@
 
 | Problem Name                                    | Difficulty |
 | ----------------------------------------------- | ---------- |
-| [217. Contains Duplicate](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/1.%20Two%20Sum.ipynb)                        | Easy       |
-| [242. Valid Anagram](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/128.%20Longest%20Consecutive%20Sequence.ipynb)                                  | Easy       |
-| [1. Two Sum](https://leetcode.com/problems/two-sum/)                                              | Easy       |
-| [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)                                | Medium     |
-| [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)              | Medium     |
-| [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)    | Medium     |
-| [659. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)          | Medium     |
-| [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)    | Hard       |
+| [217. Contains Duplicate](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/217.%20Contains%20Duplicate.ipynb)                            | Easy       |
+| [242. Valid Anagram](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/242.%20Valid%20Anagram.ipynb)                                      | Easy       |
+| [1. Two Sum](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/1.%20Two%20Sum.ipynb)                                                      | Easy       |
+| [49. Group Anagrams](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/49.%20Group%20Anagrams.ipynb)                                      | Medium     |
+| [347. Top K Frequent Elements](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/347.%20Top%20K%20Frequent%20Elements.ipynb)              | Medium     |
+| [238. Product of Array Except Self](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/238.%20Product%20of%20Array%20Except%20Self.ipynb)  | Medium     |
+| [659. Encode and Decode Strings](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/659.%20Encode%20and%20Decode%20Strings.ipynb)          | Medium     |
+| [128. Longest Consecutive Sequence](https://github.com/mohsentabibian/LeetCode-Solutions/blob/main/01.%20Array%20Hashing/128.%20Longest%20Consecutive%20Sequence.ipynb)      | Hard       |
 
 ## Contribute
 
