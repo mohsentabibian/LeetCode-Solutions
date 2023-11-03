@@ -205,4 +205,8 @@ If you have a better solution or want to add more problems to the collection, fe
 
 This repository is meant for educational purposes and to help individuals prepare for technical interviews. Please respect LeetCode's terms of use and guidelines when using this repository.
 
+## Code of Conduct
+
+We have a [Code of Conduct](CODE_OF_CONDUCT.md) that we expect all contributors to adhere to. By participating in this project, you agree to follow this code.
+
 Happy coding!
