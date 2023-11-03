@@ -16,7 +16,7 @@ execute:
 # HTML settings
 html:
   theme: jupyter
-  logo: 
+  #logo: 
   toc:
     display: true
 
