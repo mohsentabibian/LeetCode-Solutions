@@ -209,4 +209,8 @@ This repository is meant for educational purposes and to help individuals prepar
 
 We have a [Code of Conduct](CODE_OF_CONDUCT.md) that we expect all contributors to adhere to. By participating in this project, you agree to follow this code.
 
+## Security Policy
+
+We take security seriously. Please review our [Security Policy](SECURITY.md) for information on reporting security vulnerabilities.
+
 Happy coding!
