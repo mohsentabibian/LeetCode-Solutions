@@ -16,7 +16,7 @@ execute:
 # HTML settings
 html:
   theme: jupyter
-  logo: ![Blind 75 LeetCode](https://img.shields.io/badge/Blind_75_LeetCode-Solutions-blue?labelColor=red)
+  logo: 
   toc:
     display: true
 
