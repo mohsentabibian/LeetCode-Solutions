@@ -10,7 +10,7 @@ repository:
    path: /content/drive/MyDrive/LeetCode-Solutions
 
 # Execute notebooks when building (set to false if you don't want to run the code)
-execute: false
+execute:
   execute_notebooks: auto
 
 # HTML settings
