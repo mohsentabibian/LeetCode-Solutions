@@ -1,13 +1,14 @@
 # Jupyter Book configuration
 
 # Project information
-title: How to Beat a Technical Coding Interview
+title: Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges # Python Problem-Solving Pro: Conquering the Blind 75 LeetCode Challenges
 author: Mohsen Tabibian and Saeed Samadidana
 email: mohsentabibian@gmail.com
 description: Explore 75 essential problems frequently asked in tech interviews. Each solution includes detailed explanations and time/space complexity analysis. Boost your coding skills and interview preparedness!
+
 repository: 
    url: https://github.com/mohsentabibian/LeetCode-Solutions
-   path: /content/drive/MyDrive/LeetCode-Solutions
+   path: LeetCode-Solutions
 
 # Execute notebooks when building (set to false if you don't want to run the code)
 execute:
@@ -16,11 +17,15 @@ execute:
 # HTML settings
 html:
   theme: jupyter
-  logo: 
+  logo: logo.png
   toc:
     display: true
 
 # Build settings
-repository_url: https://github.com/mohsentabibian/LeetCode-Solutions  # URL to the GitHub repository
+#repository_url: https://github.com/mohsentabibian/LeetCode-Solutions  # URL to the GitHub repository
 
-# Additional configuration options can be added based on your project's needs.
+# Add GitHub buttons to the book
+# See https://jupyterbook.org/customize/config.html #add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
