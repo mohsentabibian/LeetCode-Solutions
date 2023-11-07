@@ -1,0 +1,773 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>19. Remove Nth Node From End of List &#8212; How to Beat a Technical Coding Interview</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06. Linked List/19. Remove Nth Node From End of List';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="206. Reverse Linked List" href="206.%20Reverse%20Linked%20List.html" />
+    <link rel="prev" title="143. Reorder List" href="143.%20Reorder%20List.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">How to Beat a Technical Coding Interview</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Blind 75 LeetCode Solutions
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01.%20Array%20Hashing/README.html">Array &amp; Hashing Solutions - Blind 75 LeetCode Problems</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/1.%20Two%20Sum.html">100: Same Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/128.%20Longest%20Consecutive%20Sequence.html">128. Longest Consecutive Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/217.%20Contains%20Duplicate.html">217. Contains Duplicate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/238.%20Product%20of%20Array%20Except%20Self.html">238. Product of Array Except Self</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/242.%20Valid%20Anagram.html">242. Valid Anagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/347.%20Top%20K%20Frequent%20Elements.html">347. Top K Frequent Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/49.%20Group%20Anagrams.html">49. Group Anagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/659.%20Encode%20and%20Decode%20Strings.html">659· Encode and Decode Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02.%20Two%20Pointers/README.html">Two Pointers Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02.%20Two%20Pointers/11.%20Container%20With%20Most%20Water.html">11. Container With Most Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02.%20Two%20Pointers/125.%20Valid%20Palindrome.html">125. Valid Palindrome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02.%20Two%20Pointers/15.%203Sum.html">15. 3Sum</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03.%20Sliding%20Window/README.html">Sliding Window Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.html">121. Best Time to Buy and Sell Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters.html">3. Longest Substring Without Repeating Characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/424.%20Longest%20Repeating%20Character%20Replacement.html">424. Longest Repeating Character Replacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/76.%20Minimum%20Window%20Substring.html">76. Minimum Window Substring</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04.%20Stack/README.html">Stack Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04.%20Stack/20.%20Valid%20Parentheses.html">20. Valid Parentheses</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05.%20Binary%20Search/README.html">Binary search Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05.%20Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.html">153. Find Minimum in Rotated Sorted Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05.%20Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array.html">33. Search in Rotated Sorted Array</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">Linked List Problems - Blind 75 LeetCode</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="141.%20Linked%20List%20Cycle.html">141. Linked List Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="143.%20Reorder%20List.html">143. Reorder List</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">19. Remove Nth Node From End of List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="206.%20Reverse%20Linked%20List.html">206. Reverse Linked List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="21.%20Merge%20Two%20Sorted%20Lists.html">21. Merge Two Sorted Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="23.%20Merge%20k%20Sorted%20Lists.html">23. Merge k Sorted Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07.%20Trees/README.html">Trees Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/100.%20Same%20Tree.html">100: Same Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/102.%20Binary%20Tree%20Level%20Order%20Traversal.html">102. Binary Tree Level Order Traversal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/104.%20Maximum%20Depth%20of%20Binary%20Tree.html">104. Maximum Depth of Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/105.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal.html">105. Construct Binary Tree from Preorder and Inorder Traversal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/124.%20Binary%20Tree%20Maximum%20Path%20Sum.html">124. Binary Tree Maximum Path Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/199.%20Binary%20Tree%20Right%20Side%20View.html">199. Binary Tree Right Side View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/226.%20Invert%20Binary%20Tree.html">226: Invert Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/230.%20Kth%20Smallest%20Element%20in%20a%20BST.html">230. Kth Smallest Element in a BST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.html">235. Lowest Common Ancestor of a Binary Search Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/297.%20Serialize%20and%20Deserialize%20Binary%20Tree.html">297. Serialize and Deserialize Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/572.%20Subtree%20of%20Another%20Tree.html">572: Subtree of Another Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/98.%20Validate%20Binary%20Search%20Tree.html">98. Validate Binary Search Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08.%20Tries/README.html">Trie Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08.%20Tries/208.%20Implement%20Trie%20%28Prefix%20Tree%29.html">208. Implement Trie (Prefix Tree)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08.%20Tries/211.%20Design%20Add%20and%20Search%20Words%20Data%20Structure.html">211. Design Add and Search Words Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08.%20Tries/212.%20Word%20Search%20II.html">212. Word Search II</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/README.html">Heap / Priority Queue Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/1046.%20Last%20Stone%20Weight.html">1046. Last Stone Weight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.html">295. Find Median from Data Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/703.%20Kth%20Largest%20Element%20in%20a%20Stream.html">703. Kth Largest Element in a Stream</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10.%20Backtracking/README.html">Backtracking Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10.%20Backtracking/39.%20Combination%20Sum.html">39. Combination Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10.%20Backtracking/79.%20Word%20Search.html">79. Word Search</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11.%20Graphs/README.html">Graphs Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11.%20Graphs/133.%20Clone%20Graph.html">133. Clone Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11.%20Graphs/178.%20Graph%20Valid%20Tree.html">178. Graph Valid Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11.%20Graphs/200.%20Number%20of%20Islands.html">200. Number of Islands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11.%20Graphs/207.%20Course%20Schedule.html">207. Course Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11.%20Graphs/3651.%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph.html">3651. Number of Connected Components in an Undirected Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11.%20Graphs/417.%20Pacific%20Atlantic%20Water%20Flow.html">417. Pacific Atlantic Water Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12.%20Advanced%20Graphs/README.html">Advanced Graphs Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12.%20Advanced%20Graphs/892.%20Alien%20Dictionary.html">892. Alien Dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13.%20One-D%20Dynamic%20Programming/README.html">1-D Dynamic Programming Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../13.%20One-D%20Dynamic%20Programming/70.%20Climbing%20Stairs.html">70. Climbing Stairs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../14.%20Two-D%20Dynamic%20Programming/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15.%20Greedy/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../16.%20Intervals/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../17.%20Math%20Geometry/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../18.%20Bit%20Manipulation/README.html">Blind 75 LeetCode Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mohsentabibian/LeetCode-Solutions" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mohsentabibian/LeetCode-Solutions/issues/new?title=Issue%20on%20page%20%2F06. Linked List/19. Remove Nth Node From End of List.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/06. Linked List/19. Remove Nth Node From End of List.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>19. Remove Nth Node From End of List</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-cases">Test cases</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="remove-nth-node-from-end-of-list">
+<h1>19. Remove Nth Node From End of List<a class="headerlink" href="#remove-nth-node-from-end-of-list" title="Permalink to this heading">#</a></h1>
+<p><strong>Difficulty:</strong> Medium</p>
+<p><strong>Link to Problem:</strong> <a class="reference external" href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">To see the Remove Nth Node From End of List problem on LeetCode, click here!</a></p>
+<hr class="docutils" />
+<p>Given the head of a linked list, remove the <span class="math notranslate nohighlight">\(n^{th}\)</span> node from the end of the list and return its head.</p>
+<p><strong>Constraints:</strong></p>
+<ul class="simple">
+<li><p>The number of nodes in the list is <code class="docutils literal notranslate"><span class="pre">sz</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;=</span> <span class="pre">sz</span> <span class="pre">&lt;=</span> <span class="pre">30</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">Node.val</span> <span class="pre">&lt;=</span> <span class="pre">100</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">&lt;=</span> <span class="pre">n</span> <span class="pre">&lt;=</span> <span class="pre">sz</span></code></p></li>
+</ul>
+<p><strong>Follow up:</strong> Could you do this in one pass?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">val</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="nb">next</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="nb">next</span>
+
+<span class="k">def</span> <span class="nf">removeNthFromEnd</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="c1"># Create a dummy node to handle the case of removing the head node.</span>
+    <span class="n">dummy</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">dummy</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="n">dummy</span>
+    <span class="n">second</span> <span class="o">=</span> <span class="n">dummy</span>
+    
+    <span class="c1"># Advance the first pointer by n+1 nodes.</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">next</span>
+    
+    <span class="c1"># Move both pointers simultaneously until first reaches the end.</span>
+    <span class="k">while</span> <span class="n">first</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="n">first</span><span class="o">.</span><span class="n">next</span>
+        <span class="n">second</span> <span class="o">=</span> <span class="n">second</span><span class="o">.</span><span class="n">next</span>
+    
+    <span class="c1"># Remove the nth node by updating the next pointer of the previous node.</span>
+    <span class="n">second</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">second</span><span class="o">.</span><span class="n">next</span><span class="o">.</span><span class="n">next</span>
+    
+    <span class="k">return</span> <span class="n">dummy</span><span class="o">.</span><span class="n">next</span>  <span class="c1"># Return the modified head of the linked list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="explanation">
+<h2>Explanation:<a class="headerlink" href="#explanation" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>We start by defining a <code class="docutils literal notranslate"><span class="pre">ListNode</span></code> class to represent individual nodes in a linked list. Each node has two attributes: <code class="docutils literal notranslate"><span class="pre">val</span></code> (the value of the node) and <code class="docutils literal notranslate"><span class="pre">next</span></code> (a reference to the next node in the list).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">removeNthFromEnd</span></code> function takes the head of a linked list (<code class="docutils literal notranslate"><span class="pre">head</span></code>) and the value <code class="docutils literal notranslate"><span class="pre">n</span></code>, which represents the position from the end of the list of the node to be removed. It returns the modified head of the linked list after the removal.</p></li>
+<li><p>We create a dummy node (<code class="docutils literal notranslate"><span class="pre">dummy</span></code>) at the beginning of the list. This dummy node simplifies the code by handling cases where the head of the list needs to be removed.</p></li>
+<li><p>We initialize two pointers, <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">second</span></code>, both initially pointing to the dummy node.</p></li>
+<li><p>To advance the <code class="docutils literal notranslate"><span class="pre">first</span></code> pointer by <code class="docutils literal notranslate"><span class="pre">n+1</span></code> nodes, we use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. This positions the <code class="docutils literal notranslate"><span class="pre">first</span></code> pointer <code class="docutils literal notranslate"><span class="pre">n</span></code> nodes ahead of the <code class="docutils literal notranslate"><span class="pre">second</span></code> pointer.</p></li>
+<li><p>We then move both <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">second</span></code> pointers simultaneously until <code class="docutils literal notranslate"><span class="pre">first</span></code> reaches the end of the list. This ensures that the <code class="docutils literal notranslate"><span class="pre">second</span></code> pointer ends up pointing to the node that needs to be removed.</p></li>
+<li><p>To remove the nth node from the end, we update the <code class="docutils literal notranslate"><span class="pre">next</span></code> pointer of the node pointed to by the <code class="docutils literal notranslate"><span class="pre">second</span></code> pointer to skip over the node to be removed.</p></li>
+<li><p>Finally, we return <code class="docutils literal notranslate"><span class="pre">dummy.next</span></code>, which is the modified head of the linked list without the removed node.</p></li>
+<li><p>Additionally, there are two helper functions:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">createLinkedList(values)</span></code> creates a linked list from a list of values.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convertToList(head)</span></code> converts a linked list back into a list of values.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Helper function to create a linked list from a list of values.</span>
+<span class="k">def</span> <span class="nf">createLinkedList</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">values</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="n">head</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">:]:</span>
+        <span class="n">current</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+    <span class="k">return</span> <span class="n">head</span>
+
+<span class="c1"># Helper function to convert a linked list to a list of values.</span>
+<span class="k">def</span> <span class="nf">convertToList</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">current</span> <span class="o">=</span> <span class="n">head</span>
+    <span class="k">while</span> <span class="n">current</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="o">.</span><span class="n">next</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s explain the two helper functions:</p>
+<ol class="arabic">
+<li><p><code class="docutils literal notranslate"><span class="pre">createLinkedList(values)</span></code>: This function creates a linked list from a list of values.</p>
+<ul class="simple">
+<li><p>Input: <code class="docutils literal notranslate"><span class="pre">values</span></code> is a list containing values that you want to insert into the linked list.</p></li>
+<li><p>Output: The function returns the head of the created linked list.</p></li>
+</ul>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>The function starts by checking if the <code class="docutils literal notranslate"><span class="pre">values</span></code> list is empty. If it is, it returns <code class="docutils literal notranslate"><span class="pre">None</span></code> to indicate an empty linked list.</p></li>
+<li><p>If the <code class="docutils literal notranslate"><span class="pre">values</span></code> list is not empty, it creates the first node of the linked list with the value from the first element of <code class="docutils literal notranslate"><span class="pre">values</span></code>.</p></li>
+<li><p>It then iterates through the remaining elements of <code class="docutils literal notranslate"><span class="pre">values</span></code> and creates new nodes for each value, connecting them together using the <code class="docutils literal notranslate"><span class="pre">next</span></code> attribute to form a linked list.</p></li>
+<li><p>Finally, it returns the head of the linked list, which is the first node created.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convertToList(head)</span></code>: This function converts a linked list into a list of values.</p>
+<ul class="simple">
+<li><p>Input: <code class="docutils literal notranslate"><span class="pre">head</span></code> is the head node of the linked list that you want to convert.</p></li>
+<li><p>Output: The function returns a list containing the values of the nodes in the linked list in order.</p></li>
+</ul>
+<p>Explanation:</p>
+<ul class="simple">
+<li><p>The function starts by initializing an empty list, <code class="docutils literal notranslate"><span class="pre">result</span></code>, to store the values of the linked list nodes.</p></li>
+<li><p>It then iterates through the linked list starting from the <code class="docutils literal notranslate"><span class="pre">head</span></code> node and appends the <code class="docutils literal notranslate"><span class="pre">val</span></code> attribute of each node to the <code class="docutils literal notranslate"><span class="pre">result</span></code> list.</p></li>
+<li><p>The iteration continues until it reaches the end of the linked list (i.e., the <code class="docutils literal notranslate"><span class="pre">next</span></code> attribute of the current node becomes <code class="docutils literal notranslate"><span class="pre">None</span></code>).</p></li>
+<li><p>After the iteration is complete, the function returns the <code class="docutils literal notranslate"><span class="pre">result</span></code> list, which now contains the values of all the nodes in the linked list in the same order as they appear in the linked list.</p></li>
+</ul>
+</li>
+</ol>
+<p>These helper functions are useful for creating linked lists from lists of values and converting linked lists back into lists of values, making it easier to work with linked list examples and test cases in a more familiar list format.</p>
+</section>
+<section id="test-cases">
+<h2>Test cases<a class="headerlink" href="#test-cases" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1</span>
+<span class="n">head1</span> <span class="o">=</span> <span class="n">createLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">new_head1</span> <span class="o">=</span> <span class="n">removeNthFromEnd</span><span class="p">(</span><span class="n">head1</span><span class="p">,</span> <span class="n">n1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">convertToList</span><span class="p">(</span><span class="n">new_head1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 5]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2</span>
+<span class="n">head2</span> <span class="o">=</span> <span class="n">createLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">new_head2</span> <span class="o">=</span> <span class="n">removeNthFromEnd</span><span class="p">(</span><span class="n">head2</span><span class="p">,</span> <span class="n">n2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">convertToList</span><span class="p">(</span><span class="n">new_head2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 3</span>
+<span class="n">head3</span> <span class="o">=</span> <span class="n">createLinkedList</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">n3</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">new_head3</span> <span class="o">=</span> <span class="n">removeNthFromEnd</span><span class="p">(</span><span class="n">head3</span><span class="p">,</span> <span class="n">n3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">convertToList</span><span class="p">(</span><span class="n">new_head3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Certainly! Let’s analyze the time and space complexity of the <code class="docutils literal notranslate"><span class="pre">removeNthFromEnd</span></code> function in isolation:</p>
+<p><strong>Time Complexity:</strong></p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">removeNthFromEnd</span></code> function performs two passes through the linked list. In the worst case, it needs to traverse the entire linked list of length <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+<li><p>The first pass positions the <code class="docutils literal notranslate"><span class="pre">first</span></code> pointer <span class="math notranslate nohighlight">\(n\)</span> nodes ahead of the <code class="docutils literal notranslate"><span class="pre">second</span></code> pointer. This pass takes <span class="math notranslate nohighlight">\(O(N)\)</span> time because it involves iterating through all N nodes.</p></li>
+<li><p>The second pass moves both <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">second</span></code> pointers simultaneously until <code class="docutils literal notranslate"><span class="pre">first</span></code> reaches the end of the list. This also takes <span class="math notranslate nohighlight">\(O(N)\)</span> time in the worst case.</p></li>
+<li><p>Therefore, the overall time complexity of the <code class="docutils literal notranslate"><span class="pre">removeNthFromEnd</span></code> function is <span class="math notranslate nohighlight">\(O(N)\)</span>.</p></li>
+</ul>
+<p><strong>Space Complexity:</strong></p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">removeNthFromEnd</span></code> function uses a constant amount of extra space for its variables (e.g., <code class="docutils literal notranslate"><span class="pre">first</span></code>, <code class="docutils literal notranslate"><span class="pre">second</span></code>, and <code class="docutils literal notranslate"><span class="pre">dummy</span></code>). This space usage does not depend on the size of the linked list.</p></li>
+<li><p>The space complexity is <span class="math notranslate nohighlight">\(O(1)\)</span>, indicating that the space used by the function is constant and independent of the size of the input linked list.</p></li>
+</ul>
+<p><strong>In summary</strong>, the <code class="docutils literal notranslate"><span class="pre">removeNthFromEnd</span></code> function has a time complexity of <span class="math notranslate nohighlight">\(O(N)\)</span> and a space complexity of <span class="math notranslate nohighlight">\(O(1)\)</span>. It efficiently removes the nth node from the end of the linked list with a single pass through the list and constant extra space usage.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python",
+            path: "./06. Linked List"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="143.%20Reorder%20List.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">143. Reorder List</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="206.%20Reverse%20Linked%20List.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">206. Reverse Linked List</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-cases">Test cases</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mohsen Tabibian and Saeed Samadidana
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
