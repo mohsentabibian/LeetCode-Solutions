@@ -16,7 +16,7 @@ execute:
 
 # HTML settings
 html:
-  theme: jupyter
+  theme: architect #jupyter
   logo: logo.png
   toc:
     display: true
@@ -29,5 +29,3 @@ html:
 html:
   use_issues_button: true
   use_repository_button: true
-
-theme: architect
