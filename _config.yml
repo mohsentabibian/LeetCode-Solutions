@@ -1,7 +1,7 @@
 # Jupyter Book configuration
 
 # Project information
-title: Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges # Python Problem-Solving Pro: Conquering the Blind 75 LeetCode Challenges
+title: "Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges" # Python Problem-Solving Pro: Conquering the Blind 75 LeetCode Challenges
 author: Mohsen Tabibian and Saeed Samadidana
 email: mohsentabibian@gmail.com
 description: Explore 75 essential problems frequently asked in tech interviews. Each solution includes detailed explanations and time/space complexity analysis. Boost your coding skills and interview preparedness!
