@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Blid 75 Code
+title: My sample book
 author: The Jupyter Book Community
 logo: logo.png
 
@@ -21,7 +21,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/mohsentabibian/LeetCode-Solutions  # Online location of your book
+  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
   path_to_book: docs  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
