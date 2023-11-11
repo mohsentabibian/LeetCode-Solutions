@@ -1,0 +1,638 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>207. Course Schedule &#8212; Blid 75 Code</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_chapters/11. Graphs/207. Course Schedule';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Blid 75 Code - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Blid 75 Code - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mohsentabibian/LeetCode-Solutions" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mohsentabibian/LeetCode-Solutions/issues/new?title=Issue%20on%20page%20%2F_chapters/11. Graphs/207. Course Schedule.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/_chapters/11. Graphs/207. Course Schedule.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>207. Course Schedule</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probelm-explanation">Probelm Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-cases">Test cases:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-space-complexity-analysis">Time and Space Complexity Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenging-exercises">Challenging Exercises:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="course-schedule">
+<h1>207. Course Schedule<a class="headerlink" href="#course-schedule" title="Permalink to this heading">#</a></h1>
+<p><strong>Difficulty:</strong> Medium</p>
+<p><strong>Link to Problem:</strong> <a class="reference external" href="https://leetcode.com/problems/course-schedule/">To see the Course Schedule problem on LeetCode, click here!</a></p>
+<hr class="docutils" />
+<p>There are a total of <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> courses to take, labeled from 0 to <code class="docutils literal notranslate"><span class="pre">numCourses</span> <span class="pre">-</span> <span class="pre">1</span></code>. You are given an array <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> where <code class="docutils literal notranslate"><span class="pre">prerequisites[i]</span> <span class="pre">=</span> <span class="pre">[ai,</span> <span class="pre">bi]</span></code> indicates that you <strong>must</strong> take course <code class="docutils literal notranslate"><span class="pre">bi</span></code> first if you want to take course <code class="docutils literal notranslate"><span class="pre">ai</span></code>.</p>
+<ul class="simple">
+<li><p>For example, the pair <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code>, indicates that to take course <code class="docutils literal notranslate"><span class="pre">0</span></code> you have to first take course <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
+</ul>
+<p>Return <code class="docutils literal notranslate"><span class="pre">true</span></code> if you can finish all courses. Otherwise, return <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p><strong>Constraints:</strong></p>
+<ul class="simple">
+<li><p>1 &lt;= <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> &lt;= 2000</p></li>
+<li><p>0 &lt;= <code class="docutils literal notranslate"><span class="pre">prerequisites.length</span></code> &lt;= 5000</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prerequisites[i].length</span></code> == 2</p></li>
+<li><p>0 &lt;= <code class="docutils literal notranslate"><span class="pre">ai</span></code>, <code class="docutils literal notranslate"><span class="pre">bi</span></code> &lt; <code class="docutils literal notranslate"><span class="pre">numCourses</span></code></p></li>
+<li><p>All the pairs <code class="docutils literal notranslate"><span class="pre">prerequisites[i]</span></code> are <strong>unique</strong>.</p></li>
+</ul>
+<section id="probelm-explanation">
+<h2>Probelm Explanation:<a class="headerlink" href="#probelm-explanation" title="Permalink to this heading">#</a></h2>
+<p>The problem is to determine whether it’s possible to complete a set of courses given a list of prerequisites. You are given the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">numCourses</span></code>: The total number of courses to be taken, labeled from 0 to <code class="docutils literal notranslate"><span class="pre">numCourses</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prerequisites</span></code>: A list of prerequisite courses, where each element <code class="docutils literal notranslate"><span class="pre">prerequisites[i]</span></code> is a pair <code class="docutils literal notranslate"><span class="pre">[ai,</span> <span class="pre">bi]</span></code>, indicating that you must take course <code class="docutils literal notranslate"><span class="pre">bi</span></code> before you can take course <code class="docutils literal notranslate"><span class="pre">ai</span></code>.</p></li>
+</ul>
+<p>The goal is to check whether it’s possible to complete all the courses while respecting the prerequisite requirements. In other words, you need to determine if there are any circular dependencies in the course prerequisites that would prevent you from taking all the courses.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> is 2, and <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> is <code class="docutils literal notranslate"><span class="pre">[[1,</span> <span class="pre">0]]</span></code>, it means you have two courses, and you must finish course 0 before you can take course 1. In this case, it’s possible to complete all courses, so the function should return <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> is 2, and <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> is <code class="docutils literal notranslate"><span class="pre">[[1,</span> <span class="pre">0],</span> <span class="pre">[0,</span> <span class="pre">1]]</span></code>, it means you have two courses, but there’s a circular dependency where course 1 requires course 0 and course 0 requires course 1. In this case, it’s impossible to complete all courses, so the function should return <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ul>
+<p>The problem is essentially about checking for the presence of cycles in a directed graph, where the courses are nodes, and the prerequisites represent directed edges between them. If there are no cycles, it’s possible to complete all courses; otherwise, it’s not possible.</p>
+</section>
+<section id="solution">
+<h2>Solution:<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
+<p>Here’s a Python function to implement this algorithm:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">deque</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">canFinish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">numCourses</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">prerequisites</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="c1"># Create a graph using an adjacency list to represent the courses and their prerequisites.</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>  <span class="c1"># Initialize an empty adjacency list.</span>
+        <span class="n">in_degree</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">numCourses</span>  <span class="c1"># Initialize an array to store in-degrees of courses.</span>
+
+        <span class="c1"># Populate the graph and calculate in-degrees.</span>
+        <span class="k">for</span> <span class="n">course</span><span class="p">,</span> <span class="n">prerequisite</span> <span class="ow">in</span> <span class="n">prerequisites</span><span class="p">:</span>
+            <span class="n">graph</span><span class="p">[</span><span class="n">prerequisite</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>  <span class="c1"># Add the course as a neighbor to its prerequisite.</span>
+            <span class="n">in_degree</span><span class="p">[</span><span class="n">course</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment the in-degree of the course.</span>
+
+        <span class="c1"># Initialize a queue with courses that have no prerequisites.</span>
+        <span class="n">queue</span> <span class="o">=</span> <span class="n">deque</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">course</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numCourses</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">in_degree</span><span class="p">[</span><span class="n">course</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">course</span><span class="p">)</span>
+
+        <span class="c1"># Perform topological sorting.</span>
+        <span class="k">while</span> <span class="n">queue</span><span class="p">:</span>
+            <span class="n">course</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>  <span class="c1"># Take a course with no prerequisites.</span>
+            <span class="n">numCourses</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># Decrement the count of remaining courses.</span>
+
+            <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">course</span><span class="p">]:</span>
+                <span class="n">in_degree</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>  <span class="c1"># Remove the prerequisite relationship.</span>
+                <span class="k">if</span> <span class="n">in_degree</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">queue</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>  <span class="c1"># If no more prerequisites, add to the queue.</span>
+
+        <span class="c1"># If all courses were successfully taken (numCourses becomes 0), return True.</span>
+        <span class="k">return</span> <span class="n">numCourses</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="explanation">
+<h2>Explanation:<a class="headerlink" href="#explanation" title="Permalink to this heading">#</a></h2>
+<p>This Python code is designed to determine whether it is possible to complete all the required courses given a set of prerequisites. It uses a topological sorting algorithm to accomplish this. Here’s a brief explanation of the code:</p>
+<ol class="arabic simple">
+<li><p>The code defines a <code class="docutils literal notranslate"><span class="pre">Solution</span></code> class with a <code class="docutils literal notranslate"><span class="pre">canFinish</span></code> method that takes two parameters: <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> (the total number of courses) and <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> (a list of pairs indicating which course must be taken before another).</p></li>
+<li><p>It initializes an empty graph as an adjacency list using a <code class="docutils literal notranslate"><span class="pre">defaultdict</span></code> to represent the courses and their prerequisites. It also initializes a list called <code class="docutils literal notranslate"><span class="pre">in_degree</span></code> to keep track of the in-degrees of courses, which is used in the topological sorting process.</p></li>
+<li><p>The code then populates the graph by iterating through the <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> list. For each pair <code class="docutils literal notranslate"><span class="pre">(ai,</span> <span class="pre">bi)</span></code>, it adds course <code class="docutils literal notranslate"><span class="pre">ai</span></code> as a neighbor to its prerequisite course <code class="docutils literal notranslate"><span class="pre">bi</span></code> in the graph and increments the in-degree of course <code class="docutils literal notranslate"><span class="pre">ai</span></code>.</p></li>
+<li><p>Next, it initializes a queue with courses that have no prerequisites. It does this by iterating through all the courses and adding those with an in-degree of 0 to the queue.</p></li>
+<li><p>The code performs a topological sorting of the courses using a while loop. In each iteration of the loop, it dequeues a course from the front of the queue (a course with no prerequisites).</p></li>
+<li><p>For each neighbor (course that depends on the dequeued course), it decrements the in-degree of the neighbor. If the neighbor’s in-degree becomes 0, it means all of its prerequisites have been taken, so the neighbor is added to the queue.</p></li>
+<li><p>The loop continues until there are no more courses with no prerequisites to dequeue, and the in-degrees are updated accordingly.</p></li>
+<li><p>After the loop, if all courses were successfully taken (i.e., <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> becomes 0), it means that there were no circular dependencies, and it’s possible to finish all courses. In this case, the method returns <code class="docutils literal notranslate"><span class="pre">True</span></code>. Otherwise, if there are remaining courses (indicating a circular dependency), it returns <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+</ol>
+</section>
+<section id="test-cases">
+<h2>Test cases:<a class="headerlink" href="#test-cases" title="Permalink to this heading">#</a></h2>
+<p>Here’s how you can use this solution:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1</span>
+<span class="n">numCourses1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">prerequisites1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">canFinish</span><span class="p">(</span><span class="n">numCourses1</span><span class="p">,</span> <span class="n">prerequisites1</span><span class="p">))</span>  <span class="c1"># Output: True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2</span>
+<span class="n">numCourses2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">prerequisites2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sol</span><span class="o">.</span><span class="n">canFinish</span><span class="p">(</span><span class="n">numCourses2</span><span class="p">,</span> <span class="n">prerequisites2</span><span class="p">))</span>  <span class="c1"># Output: False</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="time-and-space-complexity-analysis">
+<h2>Time and Space Complexity Analysis<a class="headerlink" href="#time-and-space-complexity-analysis" title="Permalink to this heading">#</a></h2>
+<p>Let’s analyze the time and space complexity of the <code class="docutils literal notranslate"><span class="pre">canFinish</span></code> method:</p>
+<p><strong>Time Complexity:</strong></p>
+<ol class="arabic simple">
+<li><p>Constructing the graph: In the first loop where we iterate through the <code class="docutils literal notranslate"><span class="pre">prerequisites</span></code> list, we populate the graph with prerequisites. This loop has a time complexity of O(E), where E is the number of prerequisites (edges).</p></li>
+<li><p>Initializing in-degrees and finding courses with no prerequisites: In the worst case, we iterate through all <code class="docutils literal notranslate"><span class="pre">numCourses</span></code> courses to initialize in-degrees and find the courses with no prerequisites. This has a time complexity of O(V), where V is the number of courses (vertices).</p></li>
+<li><p>Topological Sorting: In the while loop, we perform topological sorting, processing each course once and its outgoing edges. In the worst case, each course is processed once. This has a time complexity of O(V + E).</p></li>
+</ol>
+<p>The overall time complexity is O(V + E), where V is the number of courses, and E is the number of prerequisites.</p>
+<p><strong>Space Complexity:</strong></p>
+<ol class="arabic simple">
+<li><p>Graph Representation: The space complexity for storing the graph as an adjacency list is O(E), where E is the number of prerequisites.</p></li>
+<li><p>In-Degree Array: The space complexity for storing the in-degrees of courses is O(V), where V is the number of courses.</p></li>
+<li><p>Queue: The space complexity for the queue is O(V), as it may contain all the courses.</p></li>
+</ol>
+<p>The overall space complexity is O(V + E), where V is the number of courses, and E is the number of prerequisites.</p>
+<p>In most practical cases, the number of prerequisites (E) is much smaller than the number of courses (V), so the time and space complexity can often be considered as O(V).</p>
+</section>
+<section id="challenging-exercises">
+<h2>Challenging Exercises:<a class="headerlink" href="#challenging-exercises" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Optimizing Course Scheduling</strong>: Given a list of courses with their durations and prerequisites, find the most efficient way to schedule these courses to minimize the time it takes to complete all of them.</p></li>
+<li><p><strong>Detecting Cycles in Course Dependencies</strong>: Modify the original problem to not just determine if you can finish all courses but also to identify the specific courses that form a cycle in the prerequisite dependencies.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python",
+            path: "./_chapters/11. Graphs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probelm-explanation">Probelm Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-cases">Test cases:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-space-complexity-analysis">Time and Space Complexity Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenging-exercises">Challenging Exercises:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
