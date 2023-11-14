@@ -7,8 +7,9 @@ email: mohsentabibian@gmail.com
 description: Explore 75 essential problems frequently asked in tech interviews. Each solution includes detailed explanations and time/space complexity analysis. Boost your coding skills and interview preparedness!
 
 repository: 
-   url: https://github.com/mohsentabibian/LeetCode-Solutions
+   url: https://github.com/mohsentabibian/#LeetCode-Solutions
    path: LeetCode-Solutions/
+   branch: main
 
 # Execute notebooks when building (set to false if you don't want to run the code)
 execute:
