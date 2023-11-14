@@ -1,4 +1,6 @@
-# Introduction to Array Hashing Challenges
+# Chapter 1: Array Hashing
+
+## Introduction to Array Hashing Challenges
 
 Welcome to the Array Hashing section of "Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges." In this segment, we will explore a curated selection of LeetCode problems focused on array hashing, a powerful technique in algorithmic problem-solving.
 
