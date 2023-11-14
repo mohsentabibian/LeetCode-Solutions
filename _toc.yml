@@ -1,7 +1,7 @@
 format: jb-book
-root: README
+root: intro
 chapters:
-  - file: 01. Array Hashing/README
+  - file: 01. Array Hashing/intro
     sections:
       - file: 01. Array Hashing/1. Two Sum
       - file: 01. Array Hashing/128. Longest Consecutive Sequence
@@ -11,25 +11,25 @@ chapters:
       - file: 01. Array Hashing/347. Top K Frequent Elements
       - file: 01. Array Hashing/49. Group Anagrams
       - file: 01. Array Hashing/659. Encode and Decode Strings
-  - file: 02. Two Pointers/README
+  - file: 02. Two Pointers/intro
     sections:
       - file: 02. Two Pointers/11. Container With Most Water
       - file: 02. Two Pointers/125. Valid Palindrome
       - file: 02. Two Pointers/15. 3Sum
-  - file: 03. Sliding Window/README
+  - file: 03. Sliding Window/intro
     sections:
       - file: 03. Sliding Window/121. Best Time to Buy and Sell Stock
       - file: 03. Sliding Window/3. Longest Substring Without Repeating Characters
       - file: 03. Sliding Window/424. Longest Repeating Character Replacement
       - file: 03. Sliding Window/76. Minimum Window Substring
-  - file: 04. Stack/README
+  - file: 04. Stack/intro
     sections:
       - file: 04. Stack/20. Valid Parentheses
-  - file: 05. Binary Search/README
+  - file: 05. Binary Search/intro
     sections:
       - file: 05. Binary Search/153. Find Minimum in Rotated Sorted Array
       - file: 05. Binary Search/33. Search in Rotated Sorted Array
-  - file: 06. Linked List/README
+  - file: 06. Linked List/intro
     sections:
       - file: 06. Linked List/141. Linked List Cycle
       - file: 06. Linked List/143. Reorder List
@@ -37,7 +37,7 @@ chapters:
       - file: 06. Linked List/206. Reverse Linked List
       - file: 06. Linked List/21. Merge Two Sorted Lists
       - file: 06. Linked List/23. Merge k Sorted Lists
-  - file: 07. Trees/README
+  - file: 07. Trees/intro
     sections:
       - file: 07. Trees/100. Same Tree
       - file: 07. Trees/102. Binary Tree Level Order Traversal
@@ -51,21 +51,21 @@ chapters:
       - file: 07. Trees/297. Serialize and Deserialize Binary Tree
       - file: 07. Trees/572. Subtree of Another Tree
       - file: 07. Trees/98. Validate Binary Search Tree
-  - file: 08. Tries/README
+  - file: 08. Tries/intro
     sections:
       - file: 08. Tries/208. Implement Trie (Prefix Tree)
       - file: 08. Tries/211. Design Add and Search Words Data Structure
       - file: 08. Tries/212. Word Search II
-  - file: 09. Heap - Priority Queue/README
+  - file: 09. Heap - Priority Queue/intro
     sections:
       - file: 09. Heap - Priority Queue/1046. Last Stone Weight
       - file: 09. Heap - Priority Queue/295. Find Median from Data Stream
       - file: 09. Heap - Priority Queue/703. Kth Largest Element in a Stream
-  - file: 10. Backtracking/README
+  - file: 10. Backtracking/intro
     sections:
       - file: 10. Backtracking/39. Combination Sum
       - file: 10. Backtracking/79. Word Search
-  - file: 11. Graphs/README
+  - file: 11. Graphs/intro
     sections:
       - file: 11. Graphs/133. Clone Graph
       - file: 11. Graphs/178. Graph Valid Tree
@@ -73,7 +73,7 @@ chapters:
       - file: 11. Graphs/207. Course Schedule
       - file: 11. Graphs/3651. Number of Connected Components in an Undirected Graph
       - file: 11. Graphs/417. Pacific Atlantic Water Flow
-  - file: 12. Advanced Graphs/README
+  - file: 12. Advanced Graphs/intro
     sections:
       - file: 12. Advanced Graphs/892. Alien Dictionary
   - file: 13. One-D Dynamic Programming/README
