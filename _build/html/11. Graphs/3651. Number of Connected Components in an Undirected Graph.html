@@ -1,0 +1,734 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3651. Number of Connected Components in an Undirected Graph &#8212; Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11. Graphs/3651. Number of Connected Components in an Undirected Graph';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="417. Pacific Atlantic Water Flow" href="417.%20Pacific%20Atlantic%20Water%20Flow.html" />
+    <link rel="prev" title="207. Course Schedule" href="207.%20Course%20Schedule.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    Blind 75 LeetCode Solutions
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../01.%20Array%20Hashing/README.html">Array &amp; Hashing Solutions - Blind 75 LeetCode Problems</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/1.%20Two%20Sum.html">100: Same Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/128.%20Longest%20Consecutive%20Sequence.html">128. Longest Consecutive Sequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/217.%20Contains%20Duplicate.html">217. Contains Duplicate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/238.%20Product%20of%20Array%20Except%20Self.html">238. Product of Array Except Self</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/242.%20Valid%20Anagram.html">242. Valid Anagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/347.%20Top%20K%20Frequent%20Elements.html">347. Top K Frequent Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/49.%20Group%20Anagrams.html">49. Group Anagrams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../01.%20Array%20Hashing/659.%20Encode%20and%20Decode%20Strings.html">659· Encode and Decode Strings</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../02.%20Two%20Pointers/README.html">Two Pointers Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../02.%20Two%20Pointers/11.%20Container%20With%20Most%20Water.html">11. Container With Most Water</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02.%20Two%20Pointers/125.%20Valid%20Palindrome.html">125. Valid Palindrome</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02.%20Two%20Pointers/15.%203Sum.html">15. 3Sum</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../03.%20Sliding%20Window/README.html">Sliding Window Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/121.%20Best%20Time%20to%20Buy%20and%20Sell%20Stock.html">121. Best Time to Buy and Sell Stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/3.%20Longest%20Substring%20Without%20Repeating%20Characters.html">3. Longest Substring Without Repeating Characters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/424.%20Longest%20Repeating%20Character%20Replacement.html">424. Longest Repeating Character Replacement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03.%20Sliding%20Window/76.%20Minimum%20Window%20Substring.html">76. Minimum Window Substring</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../04.%20Stack/README.html">Stack Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../04.%20Stack/20.%20Valid%20Parentheses.html">20. Valid Parentheses</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../05.%20Binary%20Search/README.html">Binary search Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../05.%20Binary%20Search/153.%20Find%20Minimum%20in%20Rotated%20Sorted%20Array.html">153. Find Minimum in Rotated Sorted Array</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05.%20Binary%20Search/33.%20Search%20in%20Rotated%20Sorted%20Array.html">33. Search in Rotated Sorted Array</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../06.%20Linked%20List/README.html">Linked List Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../06.%20Linked%20List/141.%20Linked%20List%20Cycle.html">141. Linked List Cycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06.%20Linked%20List/143.%20Reorder%20List.html">143. Reorder List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06.%20Linked%20List/19.%20Remove%20Nth%20Node%20From%20End%20of%20List.html">19. Remove Nth Node From End of List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06.%20Linked%20List/206.%20Reverse%20Linked%20List.html">206. Reverse Linked List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06.%20Linked%20List/21.%20Merge%20Two%20Sorted%20Lists.html">21. Merge Two Sorted Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../06.%20Linked%20List/23.%20Merge%20k%20Sorted%20Lists.html">23. Merge k Sorted Lists</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../07.%20Trees/README.html">Trees Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/100.%20Same%20Tree.html">100: Same Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/102.%20Binary%20Tree%20Level%20Order%20Traversal.html">102. Binary Tree Level Order Traversal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/104.%20Maximum%20Depth%20of%20Binary%20Tree.html">104. Maximum Depth of Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/105.%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal.html">105. Construct Binary Tree from Preorder and Inorder Traversal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/124.%20Binary%20Tree%20Maximum%20Path%20Sum.html">124. Binary Tree Maximum Path Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/199.%20Binary%20Tree%20Right%20Side%20View.html">199. Binary Tree Right Side View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/226.%20Invert%20Binary%20Tree.html">226: Invert Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/230.%20Kth%20Smallest%20Element%20in%20a%20BST.html">230. Kth Smallest Element in a BST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/235.%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree.html">235. Lowest Common Ancestor of a Binary Search Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/297.%20Serialize%20and%20Deserialize%20Binary%20Tree.html">297. Serialize and Deserialize Binary Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/572.%20Subtree%20of%20Another%20Tree.html">572: Subtree of Another Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../07.%20Trees/98.%20Validate%20Binary%20Search%20Tree.html">98. Validate Binary Search Tree</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../08.%20Tries/README.html">Trie Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../08.%20Tries/208.%20Implement%20Trie%20%28Prefix%20Tree%29.html">208. Implement Trie (Prefix Tree)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08.%20Tries/211.%20Design%20Add%20and%20Search%20Words%20Data%20Structure.html">211. Design Add and Search Words Data Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08.%20Tries/212.%20Word%20Search%20II.html">212. Word Search II</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/README.html">Heap / Priority Queue Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/1046.%20Last%20Stone%20Weight.html">1046. Last Stone Weight</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/295.%20Find%20Median%20from%20Data%20Stream.html">295. Find Median from Data Stream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09.%20Heap%20-%20Priority%20Queue/703.%20Kth%20Largest%20Element%20in%20a%20Stream.html">703. Kth Largest Element in a Stream</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../10.%20Backtracking/README.html">Backtracking Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../10.%20Backtracking/39.%20Combination%20Sum.html">39. Combination Sum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10.%20Backtracking/79.%20Word%20Search.html">79. Word Search</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="README.html">Graphs Problems - Blind 75 LeetCode</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="133.%20Clone%20Graph.html">133. Clone Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="178.%20Graph%20Valid%20Tree.html">178. Graph Valid Tree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="200.%20Number%20of%20Islands.html">200. Number of Islands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="207.%20Course%20Schedule.html">207. Course Schedule</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3651. Number of Connected Components in an Undirected Graph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="417.%20Pacific%20Atlantic%20Water%20Flow.html">417. Pacific Atlantic Water Flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../12.%20Advanced%20Graphs/README.html">Advanced Graphs Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../12.%20Advanced%20Graphs/892.%20Alien%20Dictionary.html">892. Alien Dictionary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../13.%20One-D%20Dynamic%20Programming/README.html">1-D Dynamic Programming Problems - Blind 75 LeetCode</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../13.%20One-D%20Dynamic%20Programming/70.%20Climbing%20Stairs.html">70. Climbing Stairs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13.%20One-D%20Dynamic%20Programming/198.%20House%20Robber.html">House Robber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../13.%20One-D%20Dynamic%20Programming/213.%20House%20Robber%20II.html">House Robber II</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../14.%20Two-D%20Dynamic%20Programming/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../15.%20Greedy/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../16.%20Intervals/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../17.%20Math%20Geometry/README.html">Blind 75 LeetCode Problems</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../18.%20Bit%20Manipulation/README.html">Blind 75 LeetCode Problems</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/mohsentabibian/LeetCode-Solutions" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/mohsentabibian/LeetCode-Solutions/issues/new?title=Issue%20on%20page%20%2F11. Graphs/3651. Number of Connected Components in an Undirected Graph.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/11. Graphs/3651. Number of Connected Components in an Undirected Graph.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3651. Number of Connected Components in an Undirected Graph</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probelm-explanation">Probelm Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-cases">Test cases:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-space-complexity-analysis">Time and Space Complexity Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenging-exercises">Challenging Exercises:</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="number-of-connected-components-in-an-undirected-graph">
+<h1>3651. Number of Connected Components in an Undirected Graph<a class="headerlink" href="#number-of-connected-components-in-an-undirected-graph" title="Permalink to this heading">#</a></h1>
+<p><strong>Difficulty:</strong> Medium</p>
+<p><strong>Link to Problem:</strong> <a class="reference external" href="https://www.lintcode.com/problem/3651/">To see the Number of Connected Components in an Undirected Graph problem on LintCode, click here!</a></p>
+<hr class="docutils" />
+<p>In this problem, there is an undirected graph with <code class="docutils literal notranslate"><span class="pre">n</span></code> nodes. There is also an <code class="docutils literal notranslate"><span class="pre">edges</span></code> array. Where <code class="docutils literal notranslate"><span class="pre">edges[i]</span> <span class="pre">=</span> <span class="pre">[a,</span> <span class="pre">b]</span></code> means that there is an edge between <em>node a</em> and <em>node b</em> in the graph.</p>
+<p>You need to return <em>the number of connected components in that graph</em>.</p>
+<section id="probelm-explanation">
+<h2>Probelm Explanation:<a class="headerlink" href="#probelm-explanation" title="Permalink to this heading">#</a></h2>
+<p>The problem at hand is to determine the number of connected components in an undirected graph. Here’s a more detailed explanation of the problem:</p>
+<ul class="simple">
+<li><p>You are given an undirected graph, which consists of nodes and edges. The graph may have multiple distinct connected components.</p></li>
+<li><p>A connected component is a group of nodes within the graph where each node can be reached from every other node in the same component. In other words, there is a path between any two nodes in the same connected component, but there are no paths connecting nodes from different components.</p></li>
+<li><p>Your task is to write a function that takes as input the number of nodes <code class="docutils literal notranslate"><span class="pre">n</span></code> and a list of edges <code class="docutils literal notranslate"><span class="pre">edges</span></code>, where each edge is represented as a pair of nodes <code class="docutils literal notranslate"><span class="pre">[a,</span> <span class="pre">b]</span></code> indicating an edge between node <code class="docutils literal notranslate"><span class="pre">a</span></code> and node <code class="docutils literal notranslate"><span class="pre">b</span></code>.</p></li>
+<li><p>The goal is to determine the number of distinct connected components in the graph.</p></li>
+<li><p>You need to implement an algorithm that can identify these connected components and count how many there are in the given graph.</p></li>
+</ul>
+</section>
+<section id="solution">
+<h2>Solution:<a class="headerlink" href="#solution" title="Permalink to this heading">#</a></h2>
+<p>Here’s a Python function to implement this algorithm:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">countConnectedComponents</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">edges</span><span class="p">):</span>
+    <span class="c1"># Define a helper function for depth-first search (DFS).</span>
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">visited</span><span class="p">[</span><span class="n">node</span><span class="p">]:</span>  <span class="c1"># If the node has not been visited yet:</span>
+            <span class="n">visited</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Mark it as visited.</span>
+            <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">graph</span><span class="p">[</span><span class="n">node</span><span class="p">]:</span>  <span class="c1"># Explore all neighbors of the current node.</span>
+                <span class="n">dfs</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>  <span class="c1"># Recursively call DFS on the neighbor.</span>
+
+    <span class="c1"># Create an empty adjacency list to represent the graph.</span>
+    <span class="n">graph</span> <span class="o">=</span> <span class="p">[[]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+    <span class="c1"># Initialize a boolean list to keep track of visited nodes.</span>
+    <span class="n">visited</span> <span class="o">=</span> <span class="p">[</span><span class="kc">False</span><span class="p">]</span> <span class="o">*</span> <span class="n">n</span>
+
+    <span class="c1"># Populate the adjacency list with edges from the input.</span>
+    <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+        <span class="n">graph</span><span class="p">[</span><span class="n">a</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+        <span class="n">graph</span><span class="p">[</span><span class="n">b</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>  <span class="c1"># Since the graph is undirected, we add edges in both directions.</span>
+
+    <span class="c1"># Initialize a counter to keep track of the number of connected components.</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Iterate through all nodes in the graph.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">visited</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>  <span class="c1"># If the node has not been visited:</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment the count since we&#39;ve found a new connected component.</span>
+            <span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1"># Start a depth-first search from the unvisited node to explore the component.</span>
+
+    <span class="k">return</span> <span class="n">count</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="explanation">
+<h2>Explanation:<a class="headerlink" href="#explanation" title="Permalink to this heading">#</a></h2>
+<p>The provided Python code calculates the number of connected components in an undirected graph. Here’s a high-level explanation of how the code works:</p>
+<ol class="arabic simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">countConnectedComponents</span></code> function takes two arguments: <code class="docutils literal notranslate"><span class="pre">n</span></code> (the number of nodes in the graph) and <code class="docutils literal notranslate"><span class="pre">edges</span></code> (a list of edge pairs representing connections between nodes).</p></li>
+<li><p>Inside the function, there is a helper function called <code class="docutils literal notranslate"><span class="pre">dfs</span></code> (depth-first search), which is used to explore and mark nodes as visited.</p></li>
+<li><p>An empty adjacency list called <code class="docutils literal notranslate"><span class="pre">graph</span></code> is created to represent the graph. The <code class="docutils literal notranslate"><span class="pre">graph</span></code> is a list of lists where each element represents a node, and the list associated with each node contains its neighboring nodes.</p></li>
+<li><p>Another list called <code class="docutils literal notranslate"><span class="pre">visited</span></code> is created to keep track of visited nodes. Initially, all nodes are marked as not visited (<code class="docutils literal notranslate"><span class="pre">False</span></code>).</p></li>
+<li><p>The code populates the <code class="docutils literal notranslate"><span class="pre">graph</span></code> by iterating through the <code class="docutils literal notranslate"><span class="pre">edges</span></code> list and adding each edge to the adjacency list. Since the graph is undirected, both directions of each edge are added.</p></li>
+<li><p>A counter variable called <code class="docutils literal notranslate"><span class="pre">count</span></code> is initialized to keep track of the number of connected components.</p></li>
+<li><p>The code iterates through all nodes from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">n-1</span></code>. For each node, it checks whether it has been visited yet. If it hasn’t been visited, it means a new connected component is found. The counter <code class="docutils literal notranslate"><span class="pre">count</span></code> is incremented, and a depth-first search (DFS) is initiated from this unvisited node to explore the connected component.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">dfs</span></code> function recursively visits all nodes in the connected component, marking them as visited. It does this by checking each neighbor of the current node and recursively calling <code class="docutils literal notranslate"><span class="pre">dfs</span></code> on unvisited neighbors.</p></li>
+<li><p>After the loop through all nodes, the <code class="docutils literal notranslate"><span class="pre">count</span></code> variable contains the total number of connected components in the graph.</p></li>
+<li><p>The function returns the value of <code class="docutils literal notranslate"><span class="pre">count</span></code>, which represents the number of connected components.</p></li>
+<li><p>Two examples are provided at the end to demonstrate how to use the function with different inputs.</p></li>
+</ol>
+</section>
+<section id="test-cases">
+<h2>Test cases:<a class="headerlink" href="#test-cases" title="Permalink to this heading">#</a></h2>
+<p>Here’s how you can use this solution:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 1</span>
+<span class="n">n1</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">edges1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countConnectedComponents</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="n">edges1</span><span class="p">))</span>  <span class="c1"># Output: 1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example 2</span>
+<span class="n">n2</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">edges2</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">countConnectedComponents</span><span class="p">(</span><span class="n">n2</span><span class="p">,</span> <span class="n">edges2</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="time-and-space-complexity-analysis">
+<h2>Time and Space Complexity Analysis<a class="headerlink" href="#time-and-space-complexity-analysis" title="Permalink to this heading">#</a></h2>
+<p>Let’s analyze the time and space complexity of the code for counting the number of connected components in an undirected graph using depth-first search (DFS).</p>
+<p><strong>Time Complexity:</strong></p>
+<ul class="simple">
+<li><p>The code iterates through all nodes in the graph (from 0 to <code class="docutils literal notranslate"><span class="pre">n-1</span></code>).</p></li>
+<li><p>For each unvisited node, it initiates a depth-first search (DFS) from that node to explore the connected component.</p></li>
+<li><p>In the worst case, every node may belong to a separate connected component, and you perform a DFS for each node.</p></li>
+<li><p>The time complexity of the DFS for a single connected component is O(V + E), where V is the number of nodes in the component, and E is the number of edges.</p></li>
+<li><p>In the worst case, you perform O(n) DFS calls, each with its own O(V + E) complexity.</p></li>
+</ul>
+<p>So, the overall time complexity of the code is O(n * (V + E)). In the worst case, if the graph is connected (a single connected component), this simplifies to O(n * (n + m)), where m is the number of edges.</p>
+<p><strong>Space Complexity:</strong></p>
+<ul class="simple">
+<li><p>The main data structures used are the <code class="docutils literal notranslate"><span class="pre">graph</span></code> (adjacency list), <code class="docutils literal notranslate"><span class="pre">visited</span></code> (boolean array), and the recursive call stack for DFS.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">graph</span></code> has a space complexity of O(n + m), where n is the number of nodes, and m is the number of edges.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">visited</span></code> boolean array also has a space complexity of O(n) to keep track of whether nodes have been visited.</p></li>
+<li><p>The depth of the recursive call stack for DFS can go up to O(n) in the worst case, when all nodes are part of a single connected component.</p></li>
+</ul>
+<p>So, the overall space complexity of the code is O(n + m) for data structures and O(n) for the call stack. In the worst case, this simplifies to O(n + m).</p>
+<p>In summary, the time complexity is O(n * (V + E)), and the space complexity is O(n + m).</p>
+</section>
+<section id="challenging-exercises">
+<h2>Challenging Exercises:<a class="headerlink" href="#challenging-exercises" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Disconnected Components with Multiple Queries:</strong> You are given an undirected graph with <code class="docutils literal notranslate"><span class="pre">n</span></code> nodes and <code class="docutils literal notranslate"><span class="pre">m</span></code> edges. Initially, the graph is disconnected, and you need to process <code class="docutils literal notranslate"><span class="pre">q</span></code> queries. Each query consists of adding an edge to connect two nodes. After each query, you need to output the number of connected components in the updated graph.</p></li>
+<li><p><strong>Maximum Size of Connected Components:</strong> Given an undirected graph with <code class="docutils literal notranslate"><span class="pre">n</span></code> nodes and <code class="docutils literal notranslate"><span class="pre">m</span></code> edges, find the size of the largest connected component in the graph. Additionally, identify the nodes that belong to this largest component. You can assume there is at least one connected component in the graph.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python",
+            path: "./11. Graphs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="207.%20Course%20Schedule.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">207. Course Schedule</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="417.%20Pacific%20Atlantic%20Water%20Flow.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">417. Pacific Atlantic Water Flow</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probelm-explanation">Probelm Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solution">Solution:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#explanation">Explanation:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-cases">Test cases:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-and-space-complexity-analysis">Time and Space Complexity Analysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenging-exercises">Challenging Exercises:</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mohsen Tabibian and Saeed Samadidana
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
