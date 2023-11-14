@@ -79,6 +79,8 @@ chapters:
   - file: 13. One-D Dynamic Programming/README
     sections:
       - file: 13. One-D Dynamic Programming/70. Climbing Stairs
+      - file: 13. One-D Dynamic Programming/198. House Robber
+      - file: 13. One-D Dynamic Programming/213. House Robber II
   - file: 14. Two-D Dynamic Programming/README
   - file: 15. Greedy/README
   - file: 16. Intervals/README

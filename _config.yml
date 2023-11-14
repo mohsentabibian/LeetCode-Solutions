@@ -16,16 +16,15 @@ execute:
 
 # HTML settings
 html:
-  theme: architect #jupyter
+  theme: jupyter
   logo: logo.png
   toc:
     display: true
+  use_issues_button: true
+  use_repository_button: true
 
-# Build settings
+#Build settings
 #repository_url: https://github.com/mohsentabibian/LeetCode-Solutions  # URL to the GitHub repository
 
 # Add GitHub buttons to the book
 # See https://jupyterbook.org/customize/config.html #add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
