@@ -1,0 +1,31 @@
+# Jupyter Book configuration
+
+# Project information
+title: "Hands-On Problem-Solving in Python: Mastering the Blind 75 LeetCode Challenges" # Python Problem-Solving Pro: Conquering the Blind 75 LeetCode Challenges
+author: Mohsen Tabibian and Saeed Samadidana
+email: mohsentabibian@gmail.com
+description: Explore 75 essential problems frequently asked in tech interviews. Each solution includes detailed explanations and time/space complexity analysis. Boost your coding skills and interview preparedness!
+
+repository: 
+   url: https://github.com/mohsentabibian/LeetCode-Solutions
+   path: docs #LeetCode-Solutions/
+   branch: main
+
+# Execute notebooks when building (set to false if you don't want to run the code)
+execute:
+  execute_notebooks: auto
+
+# HTML settings
+html:
+  theme: jekyll-theme-Architect #jupyter
+  logo: logo.png
+  toc:
+    display: true
+  use_issues_button: true
+  use_repository_button: true
+
+#Build settings
+#repository_url: https://github.com/mohsentabibian/LeetCode-Solutions  # URL to the GitHub repository
+
+# Add GitHub buttons to the book
+# See https://jupyterbook.org/customize/config.html #add-a-link-to-your-repository
